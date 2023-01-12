@@ -15,7 +15,7 @@ AEnemy::AEnemy()
 
 	sphereComp = CreateDefaultSubobject<USphereComponent>(TEXT("Radius for Recognition"));
 	sphereComp->SetupAttachment(RootComponent);
-	sphereComp->SetSphereRadius(recognitionRadius);
+	sphereComp->SetSphereRadius(800.0f);
 }
 
 // Called when the game starts or when spawned
@@ -23,8 +23,11 @@ void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 
+
 	sphereComp->OnComponentBeginOverlap.AddDynamic(this, &AEnemy::Moving);
 	sphereComp->OnComponentEndOverlap.AddDynamic(this, &AEnemy::RecognitionOff);
+
+	
 }
 
 // Called every frame

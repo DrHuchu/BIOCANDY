@@ -18,9 +18,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy Settings")
 		class USphereComponent* sphereComp;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy Settings")
-		float recognitionRadius = 400.0f;
-
 	FVector direction;
 	FRotator targetDir;
 
