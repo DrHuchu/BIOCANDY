@@ -22,10 +22,12 @@ public:
 		float recognitionRadius = 400.0f;
 
 	FVector direction;
+	FRotator targetDir;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy Settings")
-		float moveSpeed;
+		float moveSpeed = 50;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy Settings")
-		float recogDelay;
+		float recogDelay = 2.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy Settings")
 		bool isRecognized = false;
 
@@ -38,7 +40,7 @@ public:
 		void RecognitionOff(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 
-	//class APlayer_Jill* player;
+	class APlayer_Jill* player;
 
 protected:
 	// Called when the game starts or when spawned

@@ -2,6 +2,8 @@
 
 
 #include "Enemy.h"
+#include "Player_Jill.h"
+#include "Math/Rotator.h"
 
 #include "Components/SphereComponent.h"
 
@@ -34,12 +36,14 @@ void AEnemy::Tick(float DeltaTime)
 	//플레이어를 인식할 경우 = isRecognized가 true일 경우
 	if (isRecognized)
 	{
+		//UE_LOG(LogTemp, Warning, TEXT("recognized"));
 		//direction을 플레이어 방향으로 설정
-		//direction = player->GetActorLocation() - GetActorLocation();
+		direction = player->GetActorLocation() - GetActorLocation();
 		//direction을 노말라이즈
-		//direction.Normalize();
+		direction.Normalize();
 		//direction 방향으로 moveSpeed의 속도로 이동
 		SetActorLocation(GetActorLocation() + direction * moveSpeed * DeltaTime);
+		SetActorRotation(direction.Rotation());
 	}
 	else
 	{
@@ -56,13 +60,15 @@ void AEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void AEnemy::Moving(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	player = Cast<APlayer_Jill>(OtherActor);
 	//오버랩된게 플레이어라면
-	//if (player != nullptr)
-	//{
+	if (player != nullptr)
+	{
+		//UE_LOG(LogTemp, Warning, TEXT("Overlap"));
 		//recogDelay만큼 시간이 흐른 뒤에 is Recognized를 true로 변경
 		FTimerHandle recogTimer;
 		GetWorld()->GetTimerManager().SetTimer(recogTimer, this, &AEnemy::Recognition, recogDelay, false);
-	//}
+	}
 }
 
 void AEnemy::Recognition()
@@ -72,6 +78,7 @@ void AEnemy::Recognition()
 
 void AEnemy::RecognitionOff(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
+	//UE_LOG(LogTemp, Warning, TEXT("Ovelap End"));
 	isRecognized = false;
 }
 
