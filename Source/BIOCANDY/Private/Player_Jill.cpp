@@ -36,6 +36,9 @@ APlayer_Jill::APlayer_Jill()
 
 	//UCharacterMovementComponent
 	GetCharacterMovement()->bOrientRotationToMovement = true;
+
+	//달리기 2배속
+	SprintSpeedMultiplier = 1.5f; 
 }
 
 
@@ -71,6 +74,9 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAxis(TEXT("Look Up"), this, &APlayer_Jill::OnAxisLookup);
 	PlayerInputComponent->BindAxis(TEXT("Turn Right"), this, &APlayer_Jill::OnAxisTurnRight);
 	PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed, this, &APlayer_Jill::OnActionJump);
+
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &APlayer_Jill::Sprint);
+	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &APlayer_Jill::StopSprinting);
 }
 
 void APlayer_Jill::OnAxisHorizontal(float value)
@@ -98,5 +104,16 @@ void APlayer_Jill::OnAxisTurnRight(float value)
 void APlayer_Jill::OnActionJump()
 {
 	Jump();
+}
+
+//달리기
+void APlayer_Jill::Sprint()
+{
+	GetCharacterMovement()->MaxWalkSpeed *= SprintSpeedMultiplier;
+}
+//달리기 멈춤
+void APlayer_Jill::StopSprinting()
+{
+	GetCharacterMovement()->MaxWalkSpeed /= SprintSpeedMultiplier;
 }
 

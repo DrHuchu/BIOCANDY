@@ -25,12 +25,19 @@ public:
 	class USpringArmComponent* springArmComp;
 	UPROPERTY(EditAnywhere)
 	class UCameraComponent* cameraComp;
+	//달리기
+	UPROPERTY(EditAnywhere)
+	float SprintSpeedMultiplier;
 
 	void OnAxisHorizontal(float value);
 	void OnAxisVertical(float value);
 	void OnAxisLookup(float value);
 	void OnAxisTurnRight(float value);
 	void OnActionJump();
+
+	//달리기 
+	void Sprint();
+	void StopSprinting();
 
 	FVector direction;
 private:
