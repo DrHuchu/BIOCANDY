@@ -2,8 +2,9 @@
 
 
 #include "Enemy.h"
+
+#include "EnemyFSM.h"
 #include "Player_Jill.h"
-#include "Math/Rotator.h"
 
 #include "Components/SphereComponent.h"
 
@@ -13,9 +14,11 @@ AEnemy::AEnemy()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	sphereComp = CreateDefaultSubobject<USphereComponent>(TEXT("Radius for Recognition"));
-	sphereComp->SetupAttachment(RootComponent);
-	sphereComp->SetSphereRadius(800.0f);
+	//sphereComp = CreateDefaultSubobject<USphereComponent>(TEXT("Radius for Recognition"));
+	//sphereComp->SetupAttachment(RootComponent);
+	//sphereComp->SetSphereRadius(800.0f);
+
+	fsm = CreateDefaultSubobject<UEnemyFSM>(TEXT("FSM"));
 }
 
 // Called when the game starts or when spawned
@@ -23,9 +26,9 @@ void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 
-
-	sphereComp->OnComponentBeginOverlap.AddDynamic(this, &AEnemy::Moving);
-	sphereComp->OnComponentEndOverlap.AddDynamic(this, &AEnemy::RecognitionOff);
+	//플레이어 인식용 sphere
+	//sphereComp->OnComponentBeginOverlap.AddDynamic(this, &AEnemy::Moving);
+	//sphereComp->OnComponentEndOverlap.AddDynamic(this, &AEnemy::RecognitionOff);
 
 	
 }
