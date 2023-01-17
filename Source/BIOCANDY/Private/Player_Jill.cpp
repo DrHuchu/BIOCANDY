@@ -166,6 +166,7 @@ void APlayer_Jill::InputFire()
 	if (bUsingSK_Pistol)
 	{
 	//총알 처리 발사
+		UE_LOG(LogTemp, Warning, TEXT("Fire"));
 	FTransform firePosition = gunMeshComp->GetSocketTransform(TEXT("FirePosition"));
 	GetWorld()->SpawnActor<ABullet>(bulletFactory, firePosition);
 	}

@@ -23,4 +23,18 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
+		class UBoxComponent* boxComp;
+
+	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
+		class UStaticMeshComponent* meshComp;
+
+	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
+		float explodeCount;
+
+	UFUNCTION()
+		void Explosion();
+
+	UFUNCTION()
+		void ElectricShock();
 };
