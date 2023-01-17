@@ -23,7 +23,7 @@ public:
 public:
 	UPROPERTY(EditAnywhere)
 	class USpringArmComponent* springArmComp;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere,BlueprintReadOnly)
 	class UCameraComponent* cameraComp;
 	//달리기
 	UPROPERTY(EditAnywhere)
@@ -40,6 +40,31 @@ public:
 	void StopSprinting();
 
 	FVector direction;
+
+	//총 스켈레탈메시
+	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category=GunMesh)
+	class USkeletalMeshComponent* gunMeshComp;
+
+	// 총알 공장
+	UPROPERTY(EditDefaultsOnly, Category=BulletFactory)
+	TSubclassOf<class ABullet> bulletFactory;
+
+	// 총알 발사 처리 함수
+	void InputFire();
+	//스나이퍼건 스태틱메시 추가
+	UPROPERTY(EditAnywhere, Category=GunMesh)
+	class UStaticMeshComponent* sniperGunComp;
+	//권총 사용 중인지 여부
+	bool bUsingSK_Pistol = true;
+	// 권총으로 변경
+	void ChangeToSK_Pistol();
+	// 스나이퍼건으로 변경
+	void ChangeToSniperGun();
+
+	//zoom을 구현하고싶다. in/out
+	void OnActionZoomIn(); //확대 FOV 30
+	void OnActionZoomOut(); //확대 FOV 90
+
 private:
 	float walkSpeed = 600;
 };
