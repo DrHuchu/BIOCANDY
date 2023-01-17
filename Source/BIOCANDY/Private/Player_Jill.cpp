@@ -161,9 +161,28 @@ void APlayer_Jill::StopSprinting()
 
 void APlayer_Jill::InputFire()
 {
+
+	//권총 사용시
+	if (bUsingSK_Pistol)
+	{
 	//총알 처리 발사
 	FTransform firePosition = gunMeshComp->GetSocketTransform(TEXT("FirePosition"));
 	GetWorld()->SpawnActor<ABullet>(bulletFactory, firePosition);
+	}
+	//스나이퍼 사용시
+	else
+	{
+		// LineTrace 시작위치
+		FVector startPos = cameraComp->GetComponentLocation();
+		// LineTrace 종료위치
+		FVector endPos = cameraComp->GetComponentLocation() + cameraComp->GetForwardVector() * 5000;
+		// LineTrace의 충돌 정보를 담을 변수
+		FHitResult hitInfo;
+		//충돌 옵션 설정 변수
+		FCollisionQueryParams params;
+		//자기 자신(플레이어)는 충돌에서 제외
+		params.AddIgnoredActor(this);
+	}
 }
 
 //권총을 변경
