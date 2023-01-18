@@ -4,7 +4,7 @@
 #include <GameFramework/CharacterMovementComponent.h>
 #include "Components/SkeletalMeshComponent.h"
 #include "Bullet.h"
-
+#include <Kismet/GameplayStatics.h>
 APlayer_Jill::APlayer_Jill()
 {
  	
@@ -166,13 +166,8 @@ void APlayer_Jill::InputFire()
 	if (bUsingSK_Pistol)
 	{
 	//총알 처리 발사
-		UE_LOG(LogTemp, Warning, TEXT("Fire"));
-	FTransform firePosition = gunMeshComp->GetSocketTransform(TEXT("FirePosition"));
-	GetWorld()->SpawnActor<ABullet>(bulletFactory, firePosition);
-	}
-	//스나이퍼 사용시
-	else
-	{
+		/*FTransform firePosition = gunMeshComp->GetSocketTransform(TEXT("FirePosition"));
+		GetWorld()->SpawnActor<ABullet>(bulletFactory, firePosition);*/
 		// LineTrace 시작위치
 		FVector startPos = cameraComp->GetComponentLocation();
 		// LineTrace 종료위치
@@ -183,6 +178,23 @@ void APlayer_Jill::InputFire()
 		FCollisionQueryParams params;
 		//자기 자신(플레이어)는 충돌에서 제외
 		params.AddIgnoredActor(this);
+		//Channel 필터를 이용한 LineTrace 충돌검출 (충돌 정보, 시작 위치, 종료 위치, 검출 채널,충돌 옵션)
+		bool bHit = GetWorld()->LineTraceSingleByChannel(hitInfo, startPos, endPos, ECC_Visibility, params);
+		//LineTrace가 부딫혔을때
+		if (bHit)
+		{
+			
+			//총알 파편 효과 트랜스폼
+			FTransform bulletTrans;
+			//부딫힌 위치 할당
+			bulletTrans.SetLocation(hitInfo.ImpactPoint);
+			//총알 파편 효과 인스턴스 생성
+			UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), bulletEffectFactory, bulletTrans);
+		}
+	}
+	//스나이퍼 사용시
+	else
+	{
 	}
 }
 

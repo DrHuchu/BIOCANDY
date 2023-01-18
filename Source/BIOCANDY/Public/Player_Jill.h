@@ -65,6 +65,9 @@ public:
 	void OnActionZoomIn(); //확대 FOV 30
 	void OnActionZoomOut(); //확대 FOV 90
 
+	// 총알 파편 효과 공장
+	UPROPERTY(EditAnywhere, Category=BulletEffect)
+	class UParticleSystem* bulletEffectFactory;
 private:
 	float walkSpeed = 600;
 };
