@@ -5,6 +5,7 @@
 
 #include "Components/BoxComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AExplodable::AExplodable()
@@ -24,6 +25,7 @@ AExplodable::AExplodable()
 void AExplodable::BeginPlay()
 {
 	Super::BeginPlay();
+	Explosion();
 	
 }
 
@@ -46,9 +48,13 @@ void AExplodable::Explosion()
 	else
 	{
 		//폭발 이펙트를 스폰시키고
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), explosionFactory, GetActorLocation());
+
+		//폭발 범위 내의 적들을 모두 화형 상태로 만든다.
+
 
 		//스스로를 제거한다.
-
+		Destroy();
 	}
 }
 
@@ -63,10 +69,15 @@ void AExplodable::ElectricShock()
 	//폭발 카운트가 0이라면
 	else
 	{
-		//폭발 이펙트를 스폰시키고
 
-		//스스로를 제거한다.
+		//전기충격 이펙트를 스폰시키고
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), explosionFactory, GetActorLocation());
 
+		//범위 내의 적들을 모두 쇼크 상태로 만든다.
+
+
+		//전기 파티클을 해제한다.
+		
 	}
 }
 

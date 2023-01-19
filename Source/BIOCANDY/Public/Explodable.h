@@ -37,4 +37,7 @@ public:
 
 	UFUNCTION()
 		void ElectricShock();
+
+	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
+		class UParticleSystem* explosionFactory;
 };
