@@ -32,10 +32,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
 		float explodeCount;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 		void Explosion();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 		void ElectricShock();
 
 	UPROPERTY(EditAnywhere, Category = "Explodable Settings")

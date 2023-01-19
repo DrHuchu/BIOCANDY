@@ -39,7 +39,7 @@ void AExplodable::Tick(float DeltaTime)
 void AExplodable::Explosion()
 {
 	//폭발 카운트가 0이 아니라면
-	if (explodeCount != 0)
+	if (explodeCount > 0)
 	{
 		//폭발 카운트를 1 깎는다.
 		explodeCount -= 1;
