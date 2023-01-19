@@ -5,6 +5,9 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Bullet.h"
 #include <Kismet/GameplayStatics.h>
+#include "Enemy.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
+
 APlayer_Jill::APlayer_Jill()
 {
  	
@@ -173,7 +176,7 @@ void APlayer_Jill::InputFire()
 		// LineTrace 종료위치
 		FVector endPos = cameraComp->GetComponentLocation() + cameraComp->GetForwardVector() * 5000;
 		// LineTrace의 충돌 정보를 담을 변수
-		FHitResult hitInfo;
+		//FHitResult hitInfo;
 		//충돌 옵션 설정 변수
 		FCollisionQueryParams params;
 		//자기 자신(플레이어)는 충돌에서 제외
@@ -181,20 +184,59 @@ void APlayer_Jill::InputFire()
 		//Channel 필터를 이용한 LineTrace 충돌검출 (충돌 정보, 시작 위치, 종료 위치, 검출 채널,충돌 옵션)
 		bool bHit = GetWorld()->LineTraceSingleByChannel(hitInfo, startPos, endPos, ECC_Visibility, params);
 		//LineTrace가 부딫혔을때
-		if (bHit)
-		{
-			
-			//총알 파편 효과 트랜스폼
-			FTransform bulletTrans;
-			//부딫힌 위치 할당
-			bulletTrans.SetLocation(hitInfo.ImpactPoint);
-			//총알 파편 효과 인스턴스 생성
-			UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), bulletEffectFactory, bulletTrans);
-		}
-	}
+// 		if (bHit)
+// 		{
+// 			//auto hitActor = hitInfo.GetActor();
+// 			//AEnemy* enemy;
+// 			//enemy = Cast<AEnemy>(hitActor);
+// 
+// 			params.bReturnPhysicalMaterial = true;
+// 			UPhysicalMaterial * pm = hitInfo.PhysMaterial.Get();
+// 			
+// 			
+// 			
+// 
+// 			if (pm != nullptr)
+// 			{
+// 				//EPhysicalSurface ph_surf = pm->SurfaceType;
+// 				EPhysicalSurface ph_surf = UPhysicalMaterial::DetermineSurfaceType(pm);
+// 
+// 				switch (ph_surf)
+// 				{
+// 
+// 				default:
+					//UE_LOG(LogTemp, Warning, TEXT("Normal"));
+					//break;
+// 
+// 				case SurfaceType1:
+// 					UE_LOG(LogTemp, Warning, TEXT("Headshot"));
+// 					FTransform bulletTrans;
+// 					//부딫힌 위치 할당
+// 					bulletTrans.SetLocation(hitInfo.ImpactPoint);
+// 					//총알 파편 효과 인스턴스 생성
+// 					UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), bulletEffectFactory, bulletTrans);
+// 					break;
+// 				}
+// 			}
+// 			else
+// 			{
+// 				UE_LOG(LogTemp, Warning, TEXT("No"));
+// 			}
+
+// 			if (enemy != nullptr)
+// 				//총알 파편 효과 트랜스폼
+// 			{
+// 				FTransform bulletTrans;
+// 				//부딫힌 위치 할당
+// 				bulletTrans.SetLocation(hitInfo.ImpactPoint);
+// 				//총알 파편 효과 인스턴스 생성
+// 				UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), bulletEffectFactory, bulletTrans);
+// 			}
+		//}
+	//}
 	//스나이퍼 사용시
-	else
-	{
+	//else
+	//{
 	}
 }
 

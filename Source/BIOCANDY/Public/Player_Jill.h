@@ -68,6 +68,9 @@ public:
 	// 총알 파편 효과 공장
 	UPROPERTY(EditAnywhere, Category=BulletEffect)
 	class UParticleSystem* bulletEffectFactory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		FHitResult hitInfo;
 private:
 	float walkSpeed = 600;
 };
