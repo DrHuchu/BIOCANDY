@@ -34,6 +34,7 @@ public:
 	void OnAxisLookup(float value);
 	void OnAxisTurnRight(float value);
 	void OnActionJump();
+	void OnInteract();
 
 	//´Þ¸®±â 
 	void Sprint();
@@ -71,6 +72,11 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		FHitResult hitInfo;
+
+	UPROPERTY(EditAnywhere)
+	class UBoxComponent* interactionBox;
+
+	class IInteractionInterface* interface;
 private:
 	float walkSpeed = 600;
 };
