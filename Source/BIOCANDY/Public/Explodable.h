@@ -27,10 +27,16 @@ public:
 		class UBoxComponent* boxComp;
 
 	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
+		class USphereComponent* sphereComp;
+
+	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
 		class UStaticMeshComponent* meshComp;
 
 	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
 		float explodeCount;
+
+	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
+		float shockCount = 30;
 
 	UFUNCTION(BlueprintCallable)
 		void Explosion();
@@ -40,4 +46,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
 		class UParticleSystem* explosionFactory;
+
+	class UEnemyFSM* enemyFSM;
 };

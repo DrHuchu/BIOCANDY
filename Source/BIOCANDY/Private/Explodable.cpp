@@ -3,7 +3,10 @@
 
 #include "Explodable.h"
 
+#include "Enemy.h"
+#include "EnemyFSM.h"
 #include "Components/BoxComponent.h"
+#include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -15,6 +18,10 @@ AExplodable::AExplodable()
 	
 	boxComp = CreateDefaultSubobject<UBoxComponent>(TEXT("boxComp"));
 	SetRootComponent(boxComp);
+
+	sphereComp = CreateDefaultSubobject<USphereComponent>(TEXT("radius"));
+	sphereComp->SetupAttachment(RootComponent);
+
 	meshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("meshComp"));
 	meshComp->SetupAttachment(RootComponent);
 
@@ -25,7 +32,6 @@ AExplodable::AExplodable()
 void AExplodable::BeginPlay()
 {
 	Super::BeginPlay();
-	Explosion();
 	
 }
 
@@ -61,23 +67,44 @@ void AExplodable::Explosion()
 void AExplodable::ElectricShock()
 {
 	//폭발 카운트가 0이 아니라면
-	if (explodeCount != 0)
+	if (shockCount == 30 || shockCount == 25 || shockCount == 15 || shockCount == 0)
 	{
-		//폭발 카운트를 1 깎는다.
-		explodeCount -= 1;
-	}
-	//폭발 카운트가 0이라면
-	else
-	{
-
 		//전기충격 이펙트를 스폰시키고
-		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), explosionFactory, GetActorLocation());
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), explosionFactory, GetActorLocation(), FRotator::ZeroRotator, FVector(1), true);
 
 		//범위 내의 적들을 모두 쇼크 상태로 만든다.
+		//1. overlappingActors 라는 배열을 만든다.
+		TArray<AActor*> overlappingActors;
 
+		//2. sphereComp에 닿는 액터들을 overlappingActors에 담는다.
+		sphereComp->GetOverlappingActors(overlappingActors);
+
+		//3. overlappingActors 안에 담긴 액터들의 상태를 모두 Shocked로 바꾼다.
+		for (auto currentActor : overlappingActors)
+		{
+
+			//currentActor가 enemy로 캐스팅 됐을 경우
+			class AEnemy* enemy;
+			enemy = Cast<AEnemy>(currentActor);
+
+			if (enemy)
+			{
+				//enemy 안에 있는 mstate를 shocked로 전이한다.
+				enemy->fsm->mState = EEnemyState::Shocked;
+			}
+		}
 
 		//전기 파티클을 해제한다.
-		
+
+
+		//쇼크 카운트를 1 깎는다.
+		shockCount -= 1;
+
+	}
+	else
+	{
+		//쇼크 카운트를 1 깎는다.
+		shockCount -= 1;
 	}
 }
 
