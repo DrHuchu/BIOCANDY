@@ -9,6 +9,8 @@
 #include "InteractionInterface.h"
 #include "Components/BoxComponent.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
+#include "Blueprint/UserWidget.h"
+#include "../BIOCANDY.h"
 
 APlayer_Jill::APlayer_Jill()
 {
@@ -79,8 +81,28 @@ void APlayer_Jill::BeginPlay()
 	Super::BeginPlay();
 	// 기본으로 권총으로 사용하도록 설정
 	ChangeToSK_Pistol();
+
+	// 스나이퍼 UI 위젯 인스턴스를 생성하고싶다.
+	_sniperUI = CreateWidget(GetWorld(), sniperUIFactory);
+	//일반 조준 UI 크로스헤어 인스턴스 생성
+	_crosshairUI = CreateWidget(GetWorld(), crosshairUIFactory);
+	//일반 조준 UI 등록
+	//_crosshairUI->AddToViewport();
+
+	// hp
+	hp = initialHp;
 }
 
+// hp 체력 히트 이벤트
+void APlayer_Jill::OnHitEvent()
+{
+	PRINT_LOG(TEXT("Damaged !!!!!")); 
+	hp--;
+	if (hp <= 0)
+	{
+		PRINT_LOG(TEXT("Player is dead!"));
+	}
+}
 
 void APlayer_Jill::Tick(float DeltaTime)
 {
@@ -172,7 +194,44 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	//인터랙션 함수 바인딩
 	PlayerInputComponent->BindAction(TEXT("Interaction"), IE_Pressed, this, &APlayer_Jill::OnInteract);
+
+	//스나이퍼 조준 모드 이벤트 처리 함수 바인딩
+	PlayerInputComponent->BindAction(TEXT("Sniper"), IE_Pressed, this,&APlayer_Jill::PistolAim);
+	PlayerInputComponent->BindAction(TEXT("Sniper"), IE_Released, this,&APlayer_Jill::PistolAim);
 }
+void APlayer_Jill::PistolAim()
+{
+	//스나이퍼건 모드가 아니면 처리하지 않는다.
+	if (bSniperAim)
+	{
+		return;
+	}
+	// Pressed 입력 처리
+	if (bUsingSK_Pistol == false)
+	{
+		// 스나이퍼 조준 모드 활성화
+		bUsingSK_Pistol = true;
+		// 스나이퍼 조준 UI 화면에서 제거
+		_sniperUI->RemoveFromParent();
+		// 카메라 시야각 원례대로 복원
+		cameraComp->SetFieldOfView(90.0f);
+		// 일반 조준 UI 등록
+		//_crosshairUI->AddToViewport();
+	}
+	// Released 입력 처리
+	else
+	{
+		// 스나이퍼 조준 모드 비활성화
+		bUsingSK_Pistol = false;
+		// 스나이퍼 조준 UI 등록
+		_sniperUI->AddToViewport();
+		// 카메라의 시야각 Field Of View 설정
+		cameraComp->SetFieldOfView(45.0f);
+		// 일반 조준 UI 제거
+		//_crosshairUI->RemoveFromParent();
+	}
+}
+
 
 void APlayer_Jill::OnAxisHorizontal(float value)
 {

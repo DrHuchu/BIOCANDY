@@ -77,6 +77,31 @@ public:
 	class UBoxComponent* interactionBox;
 
 	class IInteractionInterface* interface;
+
+	// 스나이퍼 확대 조준
+	void PistolAim();
+	// 스나이퍼 조준 중인지 여부
+	bool bSniperAim = false;
+	// 스나이퍼 UI 위젯 공장
+	UPROPERTY(EditDefaultsOnly, Category = SniperUI)
+	TSubclassOf<class UUserWidget> sniperUIFactory;
+	// 스나이퍼 UI 위젯 인스턴스
+	class UUserWidget*_sniperUI;
+	// 일반 조준 크로스헤어 UI 위젯
+	UPROPERTY(EditAnywhere, Category = SniperUI)
+	TSubclassOf<class UUserWidget> crosshairUIFactory;
+	// 크로스헤어 인스턴스
+	class UUserWidget* _crosshairUI;
+
+	// 현재 체력
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category=Health)
+	int32 hp;
+	// 초기 hp값
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category=Health)
+	int32 initialHp = 10;
+	// 피격 당했을 때 처리
+	UFUNCTION(BlueprintCallable, Category = Health)
+	void OnHitEvent();
 private:
 	float walkSpeed = 600;
 };
