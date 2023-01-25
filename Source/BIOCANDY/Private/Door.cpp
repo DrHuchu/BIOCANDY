@@ -2,8 +2,8 @@
 
 
 #include "Door.h"
-
 #include "Components/WidgetComponent.h"
+
 
 // Sets default values
 ADoor::ADoor()
@@ -17,8 +17,8 @@ ADoor::ADoor()
 	meshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh"));
 	meshComp->SetupAttachment(RootComponent);
 
-	interactionWidget=CreateDefaultSubobject<UWidgetComponent>(TEXT("Interaction Widget"));
-	interactionWidget->SetupAttachment(RootComponent);
+	interactionWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("Interaction Widget"));
+	interactionWidget->SetupAttachment(meshComp);
 }
 
 // Called when the game starts or when spawned
@@ -27,6 +27,13 @@ void ADoor::BeginPlay()
 	Super::BeginPlay();
 
 	interactionWidget->SetVisibility(false);
+
+	if(curveFloat)
+	{
+		FOnTimelineFloat TimelineProgress;
+		TimelineProgress.BindDynamic(this, &ADoor::OpenDoor);
+		timeline.AddInterpFloat(curveFloat, TimelineProgress);
+	}
 }
 
 // Called every frame
@@ -34,20 +41,26 @@ void ADoor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	timeline.TickTimeline(DeltaTime);
 }
 
 void ADoor::InteractWithMe()
 {
-	if(bIsOn)
+	if(!bIsOn)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Door Opened"));
 
-		bIsOn = false;
+		timeline.Play();
+
+		bIsOn = true;
 	}
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Door Closed"));
-		bIsOn = true;
+
+		timeline.Reverse();
+
+		bIsOn = false;
 	}
 }
 
@@ -59,5 +72,12 @@ void ADoor::ShowInteractionWidget()
 void ADoor::HideInteractionWidget()
 {
 	interactionWidget->SetVisibility(false);
+}
+
+void ADoor::OpenDoor(float value)
+{
+	FRotator rot = FRotator(0, doorRotateAngle * value, 0);
+
+	meshComp->SetRelativeRotation(rot);
 }
 
