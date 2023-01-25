@@ -16,6 +16,8 @@ enum class EEnemyState : uint8
 	Attack,
 	Damage,
 	Die,
+	Burnt,
+	Shocked,
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -31,7 +33,7 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
@@ -55,12 +57,21 @@ public:
 	//죽음상태
 	void DieState();
 
+	//화형상태
+	void BurntState();
+
+	//쇼크상태
+	void ShockedState();
+
 	//대기 시간
 	UPROPERTY(EditDefaultsOnly, Category = FSM)
 		float idleDelayTime = 2;
 
 	//경과 시간
 	float currentTime = 0;
+
+	//쇼크 시간
+	float shockTime = 15.0f;
 
 	//타깃
 	UPROPERTY(VisibleAnywhere, Category = FSM)

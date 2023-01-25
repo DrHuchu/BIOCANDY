@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "InteractionInterface.h"
+#include "Components/TimelineComponent.h"
 #include "Door.generated.h"
 
 UCLASS()
@@ -37,4 +38,17 @@ public:
 	class UWidgetComponent* interactionWidget;
 
 	bool bIsOn = false;
+
+
+protected :
+
+	FTimeline timeline;
+	UPROPERTY(EditAnywhere)
+		UCurveFloat* curveFloat;
+
+	UPROPERTY(EditAnywhere)
+		float doorRotateAngle = 90.0f;
+
+	UFUNCTION()
+		void OpenDoor(float value);
 };
