@@ -6,6 +6,8 @@
 #include "Bullet.h"
 #include <Kismet/GameplayStatics.h>
 #include "Enemy.h"
+#include "InteractionInterface.h"
+#include "Components/BoxComponent.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 
 APlayer_Jill::APlayer_Jill()
@@ -49,16 +51,6 @@ APlayer_Jill::APlayer_Jill()
 	gunMeshComp = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMeshComp"));
 	//부모 컴포넌트를 Mesh 컴포넌트로 설정
 	gunMeshComp->SetupAttachment(GetMesh(), TEXT("SK_Pistol"));
-	//4-2 스켈레탈메시 데이터 로드
-	//ConstructorHelpers::FObjectFinder<USkeletalMesh>TempGunMesh(TEXT("/Script/Engine.SkeletalMesh'/Game/Assets/Weapons/Pistol/Mesh/SK_Pistol.SK_Pistol'"));
-	//4-3 데이터 로드가 성공했다면
-	//if (TempGunMesh.Succeeded())
-	//{
-		//4-4 스켈레탈메시 데이터 할당
-	//	gunMeshComp->SetSkeletalMesh(TempGunMesh.Object);
-		//4-5 위치 조정하기
-	//	gunMeshComp->SetRelativeLocation(FVector(-14,52,120));
-	//}
 
 	//5. 스나이퍼건 컴포넌트 등록
 	sniperGunComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SniperGunComp"));
@@ -76,8 +68,11 @@ APlayer_Jill::APlayer_Jill()
 		//5.6 크기 조정하기
 		sniperGunComp->SetRelativeScale3D(FVector(0.15f));
 	}
-}
 
+	//인터랙션을 위한 박스콜리전 생성
+	interactionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Interaction Box"));
+	interactionBox->SetupAttachment(RootComponent);
+}
 
 void APlayer_Jill::BeginPlay()
 {
@@ -101,6 +96,58 @@ void APlayer_Jill::Tick(float DeltaTime)
 	AddMovementInput(resultDirection);
 
 	direction = FVector::ZeroVector;
+
+
+	//상호작용 오브젝트 여러개 겹칠 때 하나만 나오게 하는 방법
+	//overlappingActors라는 배열을 생성한다.
+	TArray<AActor*> overlappingActors;
+
+	//overlappingActors 배열에 인터랙션 박스와 겹치는 액터들을 담는다.
+	interactionBox->GetOverlappingActors(overlappingActors);
+
+
+	//아무것도 오버랩되지 않았을때는 = overlappingActors 배열의 수가 0일때는 아무것도 안 일어나게 함
+	if(overlappingActors.Num() == 0)
+	{
+		//인터페이스가 널포인터가 아니라면(방어) 위젯이 안보이게 처리함
+		if(interface)
+		{
+			interface->HideInteractionWidget();
+			interface = nullptr;
+		}
+		return;
+	}
+
+	//첫 번째로 담기는 액터를 가리키는 포인터를 closestActor라고 정의한다.
+	AActor* closestActor = overlappingActors[0];
+
+	
+	for(auto currentActor:overlappingActors)
+	{
+		//현재 체크한 배열의 액터와의 거리가 첫번째 담긴 액터보다 가까우면 현재 액터를 가장 가까운 액터로 초기화한다.
+		if(GetDistanceTo(currentActor) < GetDistanceTo(closestActor))
+		{
+			closestActor = currentActor;
+		}
+	}
+
+	//일반적인 경우 -> 오버랩된 액터가 그냥 액터일 경우에는
+	if(interface)
+	{
+		//인터페이스를 숨긴다.
+		interface->HideInteractionWidget();
+	}
+
+
+	//오버랩된 액터가 가장 가까운 액터라면
+	interface=Cast<IInteractionInterface>(closestActor);
+
+	if(interface)
+	{
+		//인터페이스를 표시한다.
+		interface->ShowInteractionWidget();
+	}
+
 }
 
 
@@ -122,6 +169,9 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction(TEXT("SK_Pistol"), IE_Pressed, this, &APlayer_Jill::ChangeToSK_Pistol);
 	//총 교체 이벤트 처리 함수 바인딩
 	PlayerInputComponent->BindAction(TEXT("sniperGun"), IE_Pressed, this, &APlayer_Jill::ChangeToSniperGun);
+
+	//인터랙션 함수 바인딩
+	PlayerInputComponent->BindAction(TEXT("Interaction"), IE_Pressed, this, &APlayer_Jill::OnInteract);
 }
 
 void APlayer_Jill::OnAxisHorizontal(float value)
@@ -149,6 +199,14 @@ void APlayer_Jill::OnAxisTurnRight(float value)
 void APlayer_Jill::OnActionJump()
 {
 	Jump();
+}
+
+void APlayer_Jill::OnInteract()
+{
+	if(interface != nullptr)
+	{
+		interface->InteractWithMe();
+	}
 }
 
 //달리기
