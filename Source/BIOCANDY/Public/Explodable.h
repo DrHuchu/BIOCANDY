@@ -33,7 +33,7 @@ public:
 		class UStaticMeshComponent* meshComp;
 
 	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
-		float explodeCount;
+		float explodeCount = 0;
 
 	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
 		float shockCount = 30;
@@ -48,4 +48,6 @@ public:
 		class UParticleSystem* explosionFactory;
 
 	class UEnemyFSM* enemyFSM;
+
+	class AEnemy* enemy;
 };

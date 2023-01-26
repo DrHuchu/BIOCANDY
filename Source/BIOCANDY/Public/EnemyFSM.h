@@ -88,4 +88,12 @@ public:
 	//공격 대기 시간
 	UPROPERTY(EditAnywhere, Category = FSM)
 		float attackDelayTime = 2.0f;
+
+	//불붙는 이펙트 팩토리
+	UPROPERTY(EditAnywhere)
+		class UParticleSystem* fireFactory;
+
+	//전기 충격 이펙트 팩토리
+	UPROPERTY(EditAnywhere)
+		class UParticleSystem* shockFactory;
 };
