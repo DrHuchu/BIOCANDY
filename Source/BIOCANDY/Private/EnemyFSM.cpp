@@ -155,10 +155,12 @@ void UEnemyFSM::DieState()
 
 void UEnemyFSM::BurntState()
 {
-	//액터를 눕히고
+	//액터가 쓰러지는 애니메이션을 재생하고
 
 	//액터에 불타는 이펙트를 스폰시킨다.
+	UGameplayStatics::SpawnEmitterAttached(fireFactory, me->GetMesh(), TEXT("Spine2Socket"));
 
+	mState = EEnemyState::Die;
 }
 
 void UEnemyFSM::ShockedState()
@@ -167,8 +169,13 @@ void UEnemyFSM::ShockedState()
 
 	//15초 후에 아이들 상태로 전환한다.
 
+	//액터에 전기충격 이펙트를 스폰시킨다.
+	UGameplayStatics::SpawnEmitterAttached(shockFactory, me->GetMesh(), TEXT("Spine2Socket"));
+
 	//1. 현재 시간에 시간을 누적시킨다.
 	currentTime += GetWorld()->DeltaTimeSeconds;
+
+
 
 	//2. 누적 시간이 쇼크타임보다 커지면
 	if(currentTime > shockTime)
