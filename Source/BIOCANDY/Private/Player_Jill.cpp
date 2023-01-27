@@ -57,8 +57,9 @@ APlayer_Jill::APlayer_Jill()
 	//5. 스나이퍼건 컴포넌트 등록
 	sniperGunComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SniperGunComp"));
 	//5-1 부모 컴포넌트를 Mesh 컴포넌트로 설정
-	sniperGunComp->SetupAttachment(GetMesh());
+	sniperGunComp->SetupAttachment(GetMesh(), TEXT("SK_Pistol"));
 	//5-2 스태틱메시 데이터 로드 
+	// 스나이퍼건의 에셋을 읽어서 컴포넌트에 넣고싶다.
 	ConstructorHelpers::FObjectFinder<UStaticMesh> TempSniperMesh(TEXT("/Script/Engine.StaticMesh'/Game/SniperGun/sniper1.sniper1'"));
 	//5-3 데이터로드가 성공했다면
 	if (TempSniperMesh.Succeeded())
@@ -66,10 +67,11 @@ APlayer_Jill::APlayer_Jill()
 		//5.4 스태틱메시 데이터 할당
 		sniperGunComp->SetStaticMesh(TempSniperMesh.Object);
 		//5.5 위치 조정하기
-		sniperGunComp->SetRelativeLocation(FVector(-22, 55, 120));
+		sniperGunComp->SetRelativeLocationAndRotation(FVector(-1.65f, 27.06f, 50.34f), FRotator(0, 0, 0));
 		//5.6 크기 조정하기
 		sniperGunComp->SetRelativeScale3D(FVector(0.15f));
 	}
+	
 
 	//인터랙션을 위한 박스콜리전 생성
 	interactionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Interaction Box"));
@@ -217,6 +219,7 @@ void APlayer_Jill::PistolAim()
 		cameraComp->SetFieldOfView(90.0f);
 		// 일반 조준 UI 등록
 		//_crosshairUI->AddToViewport();
+		IsShootReady = false;
 	}
 	// Released 입력 처리
 	else
@@ -229,6 +232,7 @@ void APlayer_Jill::PistolAim()
 		cameraComp->SetFieldOfView(45.0f);
 		// 일반 조준 UI 제거
 		//_crosshairUI->RemoveFromParent();
+		IsShootReady = true;
 	}
 }
 
@@ -285,9 +289,6 @@ void APlayer_Jill::InputFire()
 	//권총 사용시
 	if (bUsingSK_Pistol)
 	{
-	//총알 처리 발사
-		/*FTransform firePosition = gunMeshComp->GetSocketTransform(TEXT("FirePosition"));
-		GetWorld()->SpawnActor<ABullet>(bulletFactory, firePosition);*/
 		// LineTrace 시작위치
 		FVector startPos = cameraComp->GetComponentLocation();
 		// LineTrace 종료위치
@@ -300,61 +301,8 @@ void APlayer_Jill::InputFire()
 		params.AddIgnoredActor(this);
 		//Channel 필터를 이용한 LineTrace 충돌검출 (충돌 정보, 시작 위치, 종료 위치, 검출 채널,충돌 옵션)
 		bool bHit = GetWorld()->LineTraceSingleByChannel(hitInfo, startPos, endPos, ECC_Visibility, params);
-		//LineTrace가 부딫혔을때
-// 		if (bHit)
-// 		{
-// 			//auto hitActor = hitInfo.GetActor();
-// 			//AEnemy* enemy;
-// 			//enemy = Cast<AEnemy>(hitActor);
-// 
-// 			params.bReturnPhysicalMaterial = true;
-// 			UPhysicalMaterial * pm = hitInfo.PhysMaterial.Get();
-// 			
-// 			
-// 			
-// 
-// 			if (pm != nullptr)
-// 			{
-// 				//EPhysicalSurface ph_surf = pm->SurfaceType;
-// 				EPhysicalSurface ph_surf = UPhysicalMaterial::DetermineSurfaceType(pm);
-// 
-// 				switch (ph_surf)
-// 				{
-// 
-// 				default:
-					//UE_LOG(LogTemp, Warning, TEXT("Normal"));
-					//break;
-// 
-// 				case SurfaceType1:
-// 					UE_LOG(LogTemp, Warning, TEXT("Headshot"));
-// 					FTransform bulletTrans;
-// 					//부딫힌 위치 할당
-// 					bulletTrans.SetLocation(hitInfo.ImpactPoint);
-// 					//총알 파편 효과 인스턴스 생성
-// 					UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), bulletEffectFactory, bulletTrans);
-// 					break;
-// 				}
-// 			}
-// 			else
-// 			{
-// 				UE_LOG(LogTemp, Warning, TEXT("No"));
-// 			}
-
-// 			if (enemy != nullptr)
-// 				//총알 파편 효과 트랜스폼
-// 			{
-// 				FTransform bulletTrans;
-// 				//부딫힌 위치 할당
-// 				bulletTrans.SetLocation(hitInfo.ImpactPoint);
-// 				//총알 파편 효과 인스턴스 생성
-// 				UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), bulletEffectFactory, bulletTrans);
-// 			}
-		//}
-	//}
-	//스나이퍼 사용시
-	//else
-	//{
 	}
+
 }
 
 //권총을 변경

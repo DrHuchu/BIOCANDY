@@ -102,6 +102,10 @@ public:
 	// 피격 당했을 때 처리
 	UFUNCTION(BlueprintCallable, Category = Health)
 	void OnHitEvent();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsShootReady = false;
+
 private:
 	float walkSpeed = 600;
 };

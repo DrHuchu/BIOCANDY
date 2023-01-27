@@ -33,4 +33,6 @@ public:
 	class UStaticMeshComponent*bodyMeshComp;
 	//총알 제거 함수 
 	void Die();
+
+	
 };
