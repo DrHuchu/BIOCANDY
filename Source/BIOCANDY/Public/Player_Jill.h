@@ -20,7 +20,7 @@ protected:
 public:	
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-public:
+
 	UPROPERTY(EditAnywhere)
 	class USpringArmComponent* springArmComp;
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
@@ -105,6 +105,17 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsShootReady = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bIsKeyOn = false;
+
+	//UI ฐüทร
+	UPROPERTY(EditAnywhere)
+	class UUserWidget* keyWarningUI;
+
+	UPROPERTY(EditAnywhere, Category = UI)
+	TSubclassOf<class UUserWidget> keyWarningUIFactory;
+
 
 private:
 	float walkSpeed = 600;

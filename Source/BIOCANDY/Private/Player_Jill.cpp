@@ -91,6 +91,9 @@ void APlayer_Jill::BeginPlay()
 	//일반 조준 UI 등록
 	//_crosshairUI->AddToViewport();
 
+	//키 경고 UI 생성
+	keyWarningUI = CreateWidget(GetWorld(), keyWarningUIFactory);
+
 	// hp
 	hp = initialHp;
 }

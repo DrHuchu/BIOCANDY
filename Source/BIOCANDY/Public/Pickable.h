@@ -38,4 +38,6 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	bool bIsOn = false;
+
+	class APlayer_Jill* player;
 };

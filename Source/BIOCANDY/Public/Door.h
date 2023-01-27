@@ -40,8 +40,6 @@ public:
 	bool bIsOn = false;
 
 
-protected :
-
 	FTimeline timeline;
 	UPROPERTY(EditAnywhere)
 		UCurveFloat* curveFloat;
@@ -51,4 +49,6 @@ protected :
 
 	UFUNCTION()
 		void OpenDoor(float value);
+
+	class APlayer_Jill* player;
 };

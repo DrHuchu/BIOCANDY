@@ -2,6 +2,8 @@
 
 
 #include "Door.h"
+
+#include "Player_Jill.h"
 #include "Components/WidgetComponent.h"
 
 
@@ -48,18 +50,12 @@ void ADoor::InteractWithMe()
 {
 	if(!bIsOn)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Door Opened"));
-
 		timeline.Play();
-
 		bIsOn = true;
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Door Closed"));
-
 		timeline.Reverse();
-
 		bIsOn = false;
 	}
 }

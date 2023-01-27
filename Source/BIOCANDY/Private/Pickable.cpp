@@ -2,6 +2,8 @@
 
 
 #include "Pickable.h"
+
+#include "Player_Jill.h"
 #include "Components/WidgetComponent.h"
 
 // Sets default values
@@ -32,18 +34,18 @@ void APickable::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+
 }
 
 void APickable::InteractWithMe()
 {
 	if (!bIsOn)
 	{
-		Destroy();
+		//Destroy();
 		bIsOn = true;
 	}
 	else
 	{
-
 		bIsOn = false;
 	}
 }
