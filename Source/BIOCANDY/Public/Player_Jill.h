@@ -105,7 +105,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsShootReady = false;
-
+	 
 private:
 	float walkSpeed = 600;
 };
