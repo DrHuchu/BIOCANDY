@@ -35,6 +35,7 @@ public:
 	void OnAxisTurnRight(float value);
 	void OnActionJump();
 	void OnInteract();
+	void OffInteract();
 
 	//달리기 
 	void Sprint();
@@ -109,13 +110,34 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool bIsKeyOn = false;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 powerboxCount = 0;
+
 	//UI 관련
+
+	//키 없음 경고
 	UPROPERTY(EditAnywhere)
 	class UUserWidget* keyWarningUI;
-
 	UPROPERTY(EditAnywhere, Category = UI)
 	TSubclassOf<class UUserWidget> keyWarningUIFactory;
 
+	//이미 돌아간 발전기 경고
+	UPROPERTY(EditAnywhere)
+	class UUserWidget* powerboxDoneUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+	TSubclassOf<class UUserWidget> powerboxUIFactory;
+
+	//발전기 모두 돌아감 탈출하라 경고
+	UPROPERTY(EditAnywhere)
+		class UUserWidget* powerboxAllDoneUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+		TSubclassOf<class UUserWidget> powerboxAllDoneUIFactory;
+
+	//탈출문 전력 부족 경고
+	UPROPERTY(EditAnywhere)
+		class UUserWidget* escapeDoorUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+		TSubclassOf<class UUserWidget> escapeDoorUIFactory;
 
 private:
 	float walkSpeed = 600;

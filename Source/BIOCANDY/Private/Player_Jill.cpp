@@ -52,12 +52,12 @@ APlayer_Jill::APlayer_Jill()
 	//총 스켈레탈메시 컴포넌트 등록
 	gunMeshComp = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMeshComp"));
 	//부모 컴포넌트를 Mesh 컴포넌트로 설정
-	gunMeshComp->SetupAttachment(GetMesh(), TEXT("SK_Pistol"));
+	gunMeshComp->SetupAttachment(GetMesh());
 
 	//5. 스나이퍼건 컴포넌트 등록
 	sniperGunComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SniperGunComp"));
 	//5-1 부모 컴포넌트를 Mesh 컴포넌트로 설정
-	sniperGunComp->SetupAttachment(GetMesh(), TEXT("SK_Pistol"));
+	sniperGunComp->SetupAttachment(GetMesh());
 	//5-2 스태틱메시 데이터 로드 
 	// 스나이퍼건의 에셋을 읽어서 컴포넌트에 넣고싶다.
 	ConstructorHelpers::FObjectFinder<UStaticMesh> TempSniperMesh(TEXT("/Script/Engine.StaticMesh'/Game/SniperGun/sniper1.sniper1'"));
@@ -93,6 +93,15 @@ void APlayer_Jill::BeginPlay()
 
 	//키 경고 UI 생성
 	keyWarningUI = CreateWidget(GetWorld(), keyWarningUIFactory);
+
+	//파워박스 완료 UI 생성
+	powerboxDoneUI = CreateWidget(GetWorld(), powerboxUIFactory);
+
+	//파워박스 전부 완료 UI 생성
+	powerboxAllDoneUI = CreateWidget(GetWorld(), powerboxAllDoneUIFactory);
+
+	//탈출문 전력부족 UI 생성
+	escapeDoorUI = CreateWidget(GetWorld(), escapeDoorUIFactory);
 
 	// hp
 	hp = initialHp;
@@ -199,6 +208,7 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	//인터랙션 함수 바인딩
 	PlayerInputComponent->BindAction(TEXT("Interaction"), IE_Pressed, this, &APlayer_Jill::OnInteract);
+	PlayerInputComponent->BindAction(TEXT("Interaction"), IE_Released, this, &APlayer_Jill::OffInteract);
 
 	//스나이퍼 조준 모드 이벤트 처리 함수 바인딩
 	PlayerInputComponent->BindAction(TEXT("Sniper"), IE_Pressed, this,&APlayer_Jill::PistolAim);
@@ -272,6 +282,14 @@ void APlayer_Jill::OnInteract()
 	if(interface != nullptr)
 	{
 		interface->InteractWithMe();
+	}
+}
+
+void APlayer_Jill::OffInteract()
+{
+	if(interface != nullptr)
+	{
+		interface->OffInteractWithMe();
 	}
 }
 

@@ -50,6 +50,11 @@ void APickable::InteractWithMe()
 	}
 }
 
+void APickable::OffInteractWithMe()
+{
+	return;
+}
+
 void APickable::ShowInteractionWidget()
 {
 	interactionWidget->SetVisibility(true);

@@ -37,6 +37,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	class UWidgetComponent* interactionWidget;
 
+	UPROPERTY(EditAnywhere)
 	bool bIsOn = false;
 
 

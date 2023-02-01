@@ -9,6 +9,12 @@ void IInteractionInterface::InteractWithMe()
 
 }
 
+void IInteractionInterface::OffInteractWithMe()
+{
+
+}
+
+
 void IInteractionInterface::ShowInteractionWidget()
 {
 
