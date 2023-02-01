@@ -97,13 +97,14 @@ void APlayer_Jill::BeginPlay()
 	//파워박스 완료 UI 생성
 	powerboxDoneUI = CreateWidget(GetWorld(), powerboxUIFactory);
 
-	// 잔탄 UI 생성
-	magUI = CreateWidget(GetWorld(), magUIFactory);
+	//파워박스 전부 완료 UI 생성
+	powerboxAllDoneUI = CreateWidget(GetWorld(), powerboxAllDoneUIFactory);
+
+	//탈출문 전력부족 UI 생성
+	escapeDoorUI = CreateWidget(GetWorld(), escapeDoorUIFactory);
 
 	// hp
 	hp = initialHp;
-
-
 }
 
 // hp 체력 히트 이벤트
@@ -212,7 +213,6 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	//스나이퍼 조준 모드 이벤트 처리 함수 바인딩
 	PlayerInputComponent->BindAction(TEXT("Sniper"), IE_Pressed, this,&APlayer_Jill::PistolAim);
 	PlayerInputComponent->BindAction(TEXT("Sniper"), IE_Released, this,&APlayer_Jill::PistolAim);
-
 }
 void APlayer_Jill::PistolAim()
 {
@@ -228,7 +228,6 @@ void APlayer_Jill::PistolAim()
 		bUsingSK_Pistol = true;
 		// 스나이퍼 조준 UI 화면에서 제거
 		_sniperUI->RemoveFromParent();
-
 		// 카메라 시야각 원례대로 복원
 		cameraComp->SetFieldOfView(90.0f);
 		// 일반 조준 UI 등록
@@ -306,36 +305,23 @@ void APlayer_Jill::StopSprinting()
 }
 
 void APlayer_Jill::InputFire()
-{	
-	if (magUIFactory != nullptr)
-	{
-		magUIFactory->AddScore(1);
-	}
+{
+
 	//권총 사용시
 	if (bUsingSK_Pistol)
 	{
-		if (canShoot)
-		{
-			// LineTrace 시작위치
-			FVector startPos = cameraComp->GetComponentLocation();
-			// LineTrace 종료위치
-			FVector endPos = cameraComp->GetComponentLocation() + cameraComp->GetForwardVector() * 5000;
-			// LineTrace의 충돌 정보를 담을 변수
-			//FHitResult hitInfo;
-			//충돌 옵션 설정 변수
-			FCollisionQueryParams params;
-			//자기 자신(플레이어)는 충돌에서 제외
-			params.AddIgnoredActor(this);
-			//Channel 필터를 이용한 LineTrace 충돌검출 (충돌 정보, 시작 위치, 종료 위치, 검출 채널,충돌 옵션)
-			bool bHit = GetWorld()->LineTraceSingleByChannel(hitInfo, startPos, endPos, ECC_Visibility, params);
-			bulletMag--;
-			UE_LOG(LogTemp, Warning, TEXT("%d"), bulletMag);
-		}
-		if (bulletMag <= 0)
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Can't Shoot"));
-			canShoot = false;
-		}
+		// LineTrace 시작위치
+		FVector startPos = cameraComp->GetComponentLocation();
+		// LineTrace 종료위치
+		FVector endPos = cameraComp->GetComponentLocation() + cameraComp->GetForwardVector() * 5000;
+		// LineTrace의 충돌 정보를 담을 변수
+		//FHitResult hitInfo;
+		//충돌 옵션 설정 변수
+		FCollisionQueryParams params;
+		//자기 자신(플레이어)는 충돌에서 제외
+		params.AddIgnoredActor(this);
+		//Channel 필터를 이용한 LineTrace 충돌검출 (충돌 정보, 시작 위치, 종료 위치, 검출 채널,충돌 옵션)
+		bool bHit = GetWorld()->LineTraceSingleByChannel(hitInfo, startPos, endPos, ECC_Visibility, params);
 	}
 
 }

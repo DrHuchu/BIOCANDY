@@ -18,7 +18,7 @@ class BIOCANDY_API APowerbox : public APickable
 	virtual void OffInteractWithMe() override;
 
 public:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float currentTime;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -29,5 +29,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	bool powerOn = false;
 
+	UPROPERTY(EditAnywhere)
+	class AEscapeBulb* bulb;
 
 };

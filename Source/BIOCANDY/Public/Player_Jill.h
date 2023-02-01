@@ -114,30 +114,30 @@ public:
 	int32 powerboxCount = 0;
 
 	//UI 관련
+
+	//키 없음 경고
 	UPROPERTY(EditAnywhere)
 	class UUserWidget* keyWarningUI;
-
 	UPROPERTY(EditAnywhere, Category = UI)
 	TSubclassOf<class UUserWidget> keyWarningUIFactory;
 
+	//이미 돌아간 발전기 경고
 	UPROPERTY(EditAnywhere)
 	class UUserWidget* powerboxDoneUI;
-
 	UPROPERTY(EditAnywhere, Category = UI)
 	TSubclassOf<class UUserWidget> powerboxUIFactory;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
-	class UUserWidget* magUI;
-
-	UPROPERTY(EditAnywhere, Category = UI)
-	TSubclassOf<class UUserWidget> magUIFactory;
-
-	//총알 수 15발
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int bulletMag = 15;
+	//발전기 모두 돌아감 탈출하라 경고
 	UPROPERTY(EditAnywhere)
-	bool canShoot = true; 
+		class UUserWidget* powerboxAllDoneUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+		TSubclassOf<class UUserWidget> powerboxAllDoneUIFactory;
+
+	//탈출문 전력 부족 경고
+	UPROPERTY(EditAnywhere)
+		class UUserWidget* escapeDoorUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+		TSubclassOf<class UUserWidget> escapeDoorUIFactory;
 
 private:
 	float walkSpeed = 600;

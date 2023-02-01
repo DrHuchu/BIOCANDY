@@ -45,7 +45,7 @@ void ALightSwitch::InteractWithMe()
 	if(bIsOn)
 	{
 		lightComp->SetIntensity(0);
-		bIsOn = false;
+		bIsOn = false;    
 	}
 	else
 	{
