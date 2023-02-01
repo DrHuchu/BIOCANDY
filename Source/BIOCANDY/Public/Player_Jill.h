@@ -139,6 +139,19 @@ public:
 	UPROPERTY(EditAnywhere, Category = UI)
 		TSubclassOf<class UUserWidget> escapeDoorUIFactory;
 
+	// ÀåÅº¼ö UI
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+		class UUserWidget* magUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+		TSubclassOf<class UUserWidget> magUIFactory;
+
+	//ÅºÃ¢¸Þ°ÅÁø
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int bulletMag = 15;
+	UPROPERTY(EditAnywhere)
+	bool canShoot = true;
+
+
 private:
 	float walkSpeed = 600;
 };

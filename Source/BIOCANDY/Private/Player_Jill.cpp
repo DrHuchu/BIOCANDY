@@ -103,6 +103,9 @@ void APlayer_Jill::BeginPlay()
 	//呕免巩 傈仿何练 UI 积己
 	escapeDoorUI = CreateWidget(GetWorld(), escapeDoorUIFactory);
 
+	// 儡藕 UI 积己
+	magUI = CreateWidget(GetWorld(), magUIFactory);
+
 	// hp
 	hp = initialHp;
 }
