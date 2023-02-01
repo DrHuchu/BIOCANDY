@@ -20,7 +20,7 @@ protected:
 public:	
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-public:
+
 	UPROPERTY(EditAnywhere)
 	class USpringArmComponent* springArmComp;
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
@@ -35,6 +35,7 @@ public:
 	void OnAxisTurnRight(float value);
 	void OnActionJump();
 	void OnInteract();
+	void OffInteract();
 
 	//달리기 
 	void Sprint();
@@ -105,7 +106,39 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsShootReady = false;
-	 
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bIsKeyOn = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 powerboxCount = 0;
+
+	//UI 관련
+	UPROPERTY(EditAnywhere)
+	class UUserWidget* keyWarningUI;
+
+	UPROPERTY(EditAnywhere, Category = UI)
+	TSubclassOf<class UUserWidget> keyWarningUIFactory;
+
+	UPROPERTY(EditAnywhere)
+	class UUserWidget* powerboxDoneUI;
+
+	UPROPERTY(EditAnywhere, Category = UI)
+	TSubclassOf<class UUserWidget> powerboxUIFactory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	class UUserWidget* magUI;
+
+	UPROPERTY(EditAnywhere, Category = UI)
+	TSubclassOf<class UUserWidget> magUIFactory;
+
+	//총알 수 15발
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int bulletMag = 15;
+	UPROPERTY(EditAnywhere)
+	bool canShoot = true; 
+
 private:
 	float walkSpeed = 600;
 };

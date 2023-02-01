@@ -24,6 +24,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void InteractWithMe() override;
+	virtual void OffInteractWithMe() override;
 	virtual void ShowInteractionWidget() override;
 	virtual void HideInteractionWidget() override;
 
@@ -38,4 +39,6 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	bool bIsOn = false;
+
+	class APlayer_Jill* player;
 };

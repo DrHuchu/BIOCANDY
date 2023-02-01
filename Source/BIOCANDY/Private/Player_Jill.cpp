@@ -52,12 +52,12 @@ APlayer_Jill::APlayer_Jill()
 	//총 스켈레탈메시 컴포넌트 등록
 	gunMeshComp = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMeshComp"));
 	//부모 컴포넌트를 Mesh 컴포넌트로 설정
-	gunMeshComp->SetupAttachment(GetMesh(), TEXT("SK_Pistol"));
+	gunMeshComp->SetupAttachment(GetMesh());
 
 	//5. 스나이퍼건 컴포넌트 등록
 	sniperGunComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SniperGunComp"));
 	//5-1 부모 컴포넌트를 Mesh 컴포넌트로 설정
-	sniperGunComp->SetupAttachment(GetMesh(), TEXT("SK_Pistol"));
+	sniperGunComp->SetupAttachment(GetMesh());
 	//5-2 스태틱메시 데이터 로드 
 	// 스나이퍼건의 에셋을 읽어서 컴포넌트에 넣고싶다.
 	ConstructorHelpers::FObjectFinder<UStaticMesh> TempSniperMesh(TEXT("/Script/Engine.StaticMesh'/Game/SniperGun/sniper1.sniper1'"));
@@ -91,8 +91,19 @@ void APlayer_Jill::BeginPlay()
 	//일반 조준 UI 등록
 	//_crosshairUI->AddToViewport();
 
+	//키 경고 UI 생성
+	keyWarningUI = CreateWidget(GetWorld(), keyWarningUIFactory);
+
+	//파워박스 완료 UI 생성
+	powerboxDoneUI = CreateWidget(GetWorld(), powerboxUIFactory);
+
+	// 잔탄 UI 생성
+	magUI = CreateWidget(GetWorld(), magUIFactory);
+
 	// hp
 	hp = initialHp;
+
+
 }
 
 // hp 체력 히트 이벤트
@@ -196,10 +207,12 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	//인터랙션 함수 바인딩
 	PlayerInputComponent->BindAction(TEXT("Interaction"), IE_Pressed, this, &APlayer_Jill::OnInteract);
+	PlayerInputComponent->BindAction(TEXT("Interaction"), IE_Released, this, &APlayer_Jill::OffInteract);
 
 	//스나이퍼 조준 모드 이벤트 처리 함수 바인딩
 	PlayerInputComponent->BindAction(TEXT("Sniper"), IE_Pressed, this,&APlayer_Jill::PistolAim);
 	PlayerInputComponent->BindAction(TEXT("Sniper"), IE_Released, this,&APlayer_Jill::PistolAim);
+
 }
 void APlayer_Jill::PistolAim()
 {
@@ -215,6 +228,7 @@ void APlayer_Jill::PistolAim()
 		bUsingSK_Pistol = true;
 		// 스나이퍼 조준 UI 화면에서 제거
 		_sniperUI->RemoveFromParent();
+
 		// 카메라 시야각 원례대로 복원
 		cameraComp->SetFieldOfView(90.0f);
 		// 일반 조준 UI 등록
@@ -272,6 +286,14 @@ void APlayer_Jill::OnInteract()
 	}
 }
 
+void APlayer_Jill::OffInteract()
+{
+	if(interface != nullptr)
+	{
+		interface->OffInteractWithMe();
+	}
+}
+
 //달리기
 void APlayer_Jill::Sprint()
 {
@@ -284,23 +306,36 @@ void APlayer_Jill::StopSprinting()
 }
 
 void APlayer_Jill::InputFire()
-{
-
+{	
+	if (magUIFactory != nullptr)
+	{
+		magUIFactory->AddScore(1);
+	}
 	//권총 사용시
 	if (bUsingSK_Pistol)
 	{
-		// LineTrace 시작위치
-		FVector startPos = cameraComp->GetComponentLocation();
-		// LineTrace 종료위치
-		FVector endPos = cameraComp->GetComponentLocation() + cameraComp->GetForwardVector() * 5000;
-		// LineTrace의 충돌 정보를 담을 변수
-		//FHitResult hitInfo;
-		//충돌 옵션 설정 변수
-		FCollisionQueryParams params;
-		//자기 자신(플레이어)는 충돌에서 제외
-		params.AddIgnoredActor(this);
-		//Channel 필터를 이용한 LineTrace 충돌검출 (충돌 정보, 시작 위치, 종료 위치, 검출 채널,충돌 옵션)
-		bool bHit = GetWorld()->LineTraceSingleByChannel(hitInfo, startPos, endPos, ECC_Visibility, params);
+		if (canShoot)
+		{
+			// LineTrace 시작위치
+			FVector startPos = cameraComp->GetComponentLocation();
+			// LineTrace 종료위치
+			FVector endPos = cameraComp->GetComponentLocation() + cameraComp->GetForwardVector() * 5000;
+			// LineTrace의 충돌 정보를 담을 변수
+			//FHitResult hitInfo;
+			//충돌 옵션 설정 변수
+			FCollisionQueryParams params;
+			//자기 자신(플레이어)는 충돌에서 제외
+			params.AddIgnoredActor(this);
+			//Channel 필터를 이용한 LineTrace 충돌검출 (충돌 정보, 시작 위치, 종료 위치, 검출 채널,충돌 옵션)
+			bool bHit = GetWorld()->LineTraceSingleByChannel(hitInfo, startPos, endPos, ECC_Visibility, params);
+			bulletMag--;
+			UE_LOG(LogTemp, Warning, TEXT("%d"), bulletMag);
+		}
+		if (bulletMag <= 0)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Can't Shoot"));
+			canShoot = false;
+		}
 	}
 
 }
