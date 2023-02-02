@@ -68,7 +68,7 @@ void AExplodable::Explosion()
 
 			if(enemy)
 			{
-				enemy->fsm->mState = EEnemyState::Burnt;
+				enemy->enemyFsm->mState = EEnemyState::Burnt;
 			}
 		}
 		//스스로를 제거한다.
@@ -99,10 +99,10 @@ void AExplodable::ElectricShock()
 				if (enemy)
 				{
 					//에너미의 상태가 die가 아니라면
-					if (enemy->fsm->mState != EEnemyState::Die)
+					if (enemy->enemyFsm->mState != EEnemyState::Die)
 					{
 						//enemy 안에 있는 mstate를 shocked로 전이한다.
-						enemy->fsm->mState = EEnemyState::Shocked;
+						enemy->enemyFsm->mState = EEnemyState::Shocked;
 					}
 				}
 			}
