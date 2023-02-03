@@ -57,4 +57,7 @@ public:
 
 	UPROPERTY()
 		class UEnemyAnim* enemyAnim;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnMyDamage();
 };
