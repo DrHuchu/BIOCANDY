@@ -4,6 +4,7 @@
 #include "EnemyFSM.h"
 
 #include "Enemy.h"
+#include "EnemyAnim.h"
 #include "Player_Jill.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -33,7 +34,9 @@ void UEnemyFSM::BeginPlay()
 
 	//소유 객체 가져오기
 	me = Cast<AEnemy>(GetOwner());
-	
+
+	mState = EEnemyState::Idle;
+
 }
 
 
@@ -86,7 +89,7 @@ void UEnemyFSM::IdleState()
 
 		//3. 이동상태로 전환하고 싶다.
 	{
-		mState = EEnemyState::Move;
+		SetState(EEnemyState::Move);
 		//4. 경과 시간을 초기화한다.
 		currentTime = 0;
 	}
@@ -106,11 +109,11 @@ void UEnemyFSM::MoveState()
 
 	//타깃과 가까워지면 공격상태로 전환하고 싶다.
 	//1. 만약 거리가 공격 범위 안에 들어오면
-	if(dir.Size() < attackRange)
+	if (dir.Size() < attackRange)
 
-	//2. 공격 상태로 전환하고 싶다.
+		//2. 공격 상태로 전환하고 싶다.
 	{
-		mState = EEnemyState::Attack;
+		SetState(EEnemyState::Attack);
 	}
 }
 
@@ -125,32 +128,40 @@ void UEnemyFSM::AttackState()
 
 		//3. 공격하고 싶다.
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Attack"));
-		//4. 경과 시간 초기화
-		currentTime = 0;
-	}
-
-	//타깃이 공격 범위를 벗어나면 상태를 이동으로 전환하고 싶다.
+		//타깃이 공격 범위를 벗어나면 상태를 이동으로 전환하고 싶다.
 	//1. 타깃과의 거리가 필요하다.
-	float distance = FVector::Distance(target->GetActorLocation(), me->GetActorLocation());
+		float distance = FVector::Distance(target->GetActorLocation(), me->GetActorLocation());
 
-	//2. 타깃과의 거리가 공격 범위를 벗어났으니까
-	if(distance > attackRange)
-
-	//3. 상태를 이동으로 전환하고 싶다.
-	{
-		mState = EEnemyState::Move;
+		//2. 타깃과의 거리가 공격 범위를 벗어났으니까
+		if (distance > attackRange)
+		{
+			//3. 상태를 이동으로 전환하고 싶다.
+			SetState(EEnemyState::Move);
+		}
+		else
+		{
+			me->enemyAnim->bAttackPlay = true;
+			currentTime = 0;
+			bAttackPlay = false;
+		}
 	}
+
+	
 }
 
 void UEnemyFSM::DamageState()
 {
-
+	currentTime += GetWorld()->GetDeltaSeconds();
+	if (currentTime > damageDelayTime)
+	{
+		SetState(EEnemyState::Move);
+		currentTime = 0;
+	}
 }
 
 void UEnemyFSM::DieState()
 {
-
+	return;
 }
 
 void UEnemyFSM::BurntState()
@@ -160,15 +171,11 @@ void UEnemyFSM::BurntState()
 	//액터에 불타는 이펙트를 스폰시킨다.
 	UGameplayStatics::SpawnEmitterAttached(fireFactory, me->GetMesh(), TEXT("Spine2Socket"));
 
-	mState = EEnemyState::Die;
+	SetState(EEnemyState::Die);
 }
 
 void UEnemyFSM::ShockedState()
 {
-	//쇼크 애니메이션을 재생하고
-
-	//15초 후에 아이들 상태로 전환한다.
-
 	//액터에 전기충격 이펙트를 스폰시킨다.
 	UGameplayStatics::SpawnEmitterAttached(shockFactory, me->GetMesh(), TEXT("Spine2Socket"));
 
@@ -178,11 +185,48 @@ void UEnemyFSM::ShockedState()
 
 
 	//2. 누적 시간이 쇼크타임보다 커지면
-	if(currentTime > shockTime)
+	if (currentTime > shockTime)
 
-	//3. FSM의 상태를 아이들로 전이한다.
+		//3. FSM의 상태를 아이들로 전이한다.
 	{
-		mState = EEnemyState::Idle;
+		SetState(EEnemyState::Idle);
+	}
+}
+
+void UEnemyFSM::OnDamageProcess(int damageValue)
+{
+	//체력을 소모하고
+	hp -= damageValue;
+	//체력이 0이 되면
+	if(hp <= 0)
+	{
+		//Die 한다.
+		SetState(EEnemyState::Die);
+	}
+
+	//체력이 0보다 크면
+	else
+	{
+		//Damage 하고 싶다.
+		SetState(EEnemyState::Damage);
+	}
+}
+
+void UEnemyFSM::SetState(EEnemyState next)
+{
+	mState = next;
+	me->enemyAnim->state = next;
+}
+
+void UEnemyFSM::OnHitEvent()
+{
+	me->enemyAnim->bAttackPlay = false;
+	bAttackPlay = true;
+	//3. 공격을 하고 (조건은 공격거리 안에 있는가?)
+	float dist = target->GetDistanceTo(me);
+	if (dist <= attackRange)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Enemy is Attack"));
 	}
 }
 

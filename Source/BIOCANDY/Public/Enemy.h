@@ -53,5 +53,11 @@ public:
 
 	//적 AI관리 컴포넌트 클래스
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = FSMComponent)
-		class UEnemyFSM* fsm;
+		class UEnemyFSM* enemyFsm;
+
+	UPROPERTY()
+		class UEnemyAnim* enemyAnim;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnMyDamage();
 };

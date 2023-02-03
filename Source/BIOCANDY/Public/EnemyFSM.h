@@ -89,6 +89,12 @@ public:
 	UPROPERTY(EditAnywhere, Category = FSM)
 		float attackDelayTime = 2.0f;
 
+	bool bAttackPlay;
+
+	//히트리커버리 타임
+	UPROPERTY(EditAnywhere, Category = FSM)
+	float damageDelayTime = 2;
+
 	//불붙는 이펙트 팩토리
 	UPROPERTY(EditAnywhere)
 		class UParticleSystem* fireFactory;
@@ -96,4 +102,19 @@ public:
 	//전기 충격 이펙트 팩토리
 	UPROPERTY(EditAnywhere)
 		class UParticleSystem* shockFactory;
+
+	//에너미 HP
+	int hp;
+	int maxHP;
+
+	//피격 함수
+	UFUNCTION()
+		void OnDamageProcess(int damageValue);
+	
+
+	//상태 전이 함수
+	void SetState(EEnemyState next);
+
+	UFUNCTION(BlueprintCallable)
+	void OnHitEvent();
 };

@@ -5,6 +5,7 @@
 
 #include "EnemyFSM.h"
 #include "Player_Jill.h"
+#include "EnemyAnim.h"
 
 #include "Components/SphereComponent.h"
 
@@ -18,7 +19,14 @@ AEnemy::AEnemy()
 	//sphereComp->SetupAttachment(RootComponent);
 	//sphereComp->SetSphereRadius(800.0f);
 
-	fsm = CreateDefaultSubobject<UEnemyFSM>(TEXT("FSM"));
+	ConstructorHelpers::FClassFinder<UAnimInstance> tempAnim(TEXT("/Script/Engine.AnimBlueprint'/Game/BluePrint/ABP_Enemy.ABP_Enemy_C'"));
+
+	if(tempAnim.Succeeded())
+	{
+		GetMesh()->SetAnimInstanceClass(tempAnim.Class);
+	}
+
+	enemyFsm = CreateDefaultSubobject<UEnemyFSM>(TEXT("FSM"));
 }
 
 // Called when the game starts or when spawned
@@ -30,6 +38,7 @@ void AEnemy::BeginPlay()
 	//sphereComp->OnComponentBeginOverlap.AddDynamic(this, &AEnemy::Moving);
 	//sphereComp->OnComponentEndOverlap.AddDynamic(this, &AEnemy::RecognitionOff);
 
+	enemyAnim = Cast<UEnemyAnim>(GetMesh()->GetAnimInstance());
 	
 }
 
@@ -39,22 +48,22 @@ void AEnemy::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	
-	//플레이어를 인식할 경우 = isRecognized가 true일 경우
-	if (isRecognized)
-	{
-		//UE_LOG(LogTemp, Warning, TEXT("recognized"));
-		//direction을 플레이어 방향으로 설정
-		direction = player->GetActorLocation() - GetActorLocation();
-		//direction을 노말라이즈
-		direction.Normalize();
-		//direction 방향으로 moveSpeed의 속도로 이동
-		SetActorLocation(GetActorLocation() + direction * moveSpeed * DeltaTime);
-		SetActorRotation(direction.Rotation());
-	}
-	else
-	{
-		return;
-	}
+	////플레이어를 인식할 경우 = isRecognized가 true일 경우
+	//if (isRecognized)
+	//{
+	//	//UE_LOG(LogTemp, Warning, TEXT("recognized"));
+	//	//direction을 플레이어 방향으로 설정
+	//	direction = player->GetActorLocation() - GetActorLocation();
+	//	//direction을 노말라이즈
+	//	direction.Normalize();
+	//	//direction 방향으로 moveSpeed의 속도로 이동
+	//	SetActorLocation(GetActorLocation() + direction * moveSpeed * DeltaTime);
+	//	SetActorRotation(direction.Rotation());
+	//}
+	//else
+	//{
+	//	return;
+	//}
 }
 
 // Called to bind functionality to input
