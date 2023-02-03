@@ -60,4 +60,10 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnMyDamage();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnMyShock();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnMyBurn();
 };
