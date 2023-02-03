@@ -13,5 +13,15 @@ UCLASS()
 class BIOCANDY_API UPlayerJillAnim : public UAnimInstance
 {
 	GENERATED_BODY()
+public:
+
+	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
 	
+	// forwardVelocity, rightVelocity
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float ForwardVelocity; 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float RightVelocity;
+
+	void OnFire();
 };
