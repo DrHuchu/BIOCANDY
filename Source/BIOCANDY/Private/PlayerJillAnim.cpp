@@ -19,3 +19,5 @@ void UPlayerJillAnim::NativeUpdateAnimation(float DeltaSeconds)
 		ForwardVelocity = FVector::DotProduct(velocity, owner->GetActorForwardVector());
 	}
 }
+
+

@@ -11,7 +11,7 @@
 #include "PhysicalMaterials/PhysicalMaterial.h"
 #include "Blueprint/UserWidget.h"
 #include "../BIOCANDY.h"
-
+#include "PlayerJillAnim.h"
 APlayer_Jill::APlayer_Jill()
 {
  	
@@ -120,6 +120,29 @@ void APlayer_Jill::OnHitEvent()
 		PRINT_LOG(TEXT("Player is dead!"));
 	}
 }
+//재장전
+void APlayer_Jill::OnActionReload()
+{
+	//탄창에 남아있는 총알의 숫자가 탄탕의 최대치보다 작을때
+	if (pistolCountMag < maxPistolCountMag)
+	{
+		// 재장전한다.
+		if (pistolCountBag != 0)
+		{
+			if (pistolCountBag > (maxPistolCountMag - pistolCountMag))
+			{
+				pistolCountBag = pistolCountBag - (maxPistolCountMag - pistolCountMag);
+				pistolCountMag = pistolCountMag + (maxPistolCountMag - pistolCountMag);
+			}
+			else
+			{
+				pistolCountBag =0;
+				pistolCountMag = pistolCountMag + (maxPistolCountMag - pistolCountMag);
+			}
+		}
+	}
+}
+
 
 void APlayer_Jill::Tick(float DeltaTime)
 {
@@ -216,6 +239,9 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	//스나이퍼 조준 모드 이벤트 처리 함수 바인딩
 	PlayerInputComponent->BindAction(TEXT("Sniper"), IE_Pressed, this,&APlayer_Jill::PistolAim);
 	PlayerInputComponent->BindAction(TEXT("Sniper"), IE_Released, this,&APlayer_Jill::PistolAim);
+
+	//재장전
+	PlayerInputComponent->BindAction(TEXT("Reload"), IE_Pressed, this,&APlayer_Jill::OnActionReload);
 }
 void APlayer_Jill::PistolAim()
 {
@@ -309,7 +335,24 @@ void APlayer_Jill::StopSprinting()
 
 void APlayer_Jill::InputFire()
 {
+	//총쏘는 애니메이션을 재생하고 싶다.
+	//auto anim = Cast<UPlayerJillAnim>(GetMesh()->GetAnimInstance());
 
+	//총을 쏠때 총알이 남아있는지 확인
+	// 만약 남아있다면 1발 차감
+	// 그렇지 않다면 총을 쏘지 않는다.
+	// if (bUsingSK_Pistol)
+	// {
+	// 	if (pistolCountMag > 0)
+	// 	{
+	// 		pistolCountMag--;
+	// 	}
+	// 	else
+	// 	{
+	// 		return;
+	// 	}
+	// }
+	
 	//권총 사용시
 	if (bUsingSK_Pistol)
 	{

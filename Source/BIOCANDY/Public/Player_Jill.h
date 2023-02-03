@@ -29,6 +29,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	float SprintSpeedMultiplier;
 
+
 	void OnAxisHorizontal(float value);
 	void OnAxisVertical(float value);
 	void OnAxisLookup(float value);
@@ -145,9 +146,17 @@ public:
 	UPROPERTY(EditAnywhere, Category = UI)
 		TSubclassOf<class UUserWidget> magUIFactory;
 
-	//ÅºÃ¢¸Þ°ÅÁø
+	//ÅºÃ¢¸Þ°ÅÁø, ÀçÀåÀü
+
+	UFUNCTION(BlueprintCallable)
+	void OnActionReload();
+
+	//ÃÑÅºÃ¢, ÅºÃ¢ MAX, ÅºÃ¢ °¡¹æ
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int bulletMag = 15;
+	int pistolCountMag;
+	int maxPistolCountMag = 15;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int pistolCountBag = 30;
 	UPROPERTY(EditAnywhere)
 	bool canShoot = true;
 
