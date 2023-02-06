@@ -37,6 +37,8 @@ void UEnemyFSM::BeginPlay()
 
 	mState = EEnemyState::Idle;
 
+	me->hp = me->maxHP;
+
 }
 
 
@@ -195,19 +197,45 @@ void UEnemyFSM::ShockedState()
 void UEnemyFSM::OnDamageProcess(int damageValue)
 {
 	//체력을 소모하고
-	hp -= damageValue;
+	me->hp -= damageValue;
 	//체력이 0이 되면
-	if(hp <= 0)
+	if(me->hp <= 0)
 	{
-		//Die 한다.
-		SetState(EEnemyState::Die);
+		if(bDieEnd == false)
+		{
+			//Die 한다.
+			SetState(EEnemyState::Die);
+			me->OnMyDamage(TEXT("Die"));
+			bDieEnd = true;
+		}
+		else
+		{
+			return;
+		}
 	}
 
 	//체력이 0보다 크면
 	else
 	{
-		//Damage 하고 싶다.
-		SetState(EEnemyState::Damage);
+		if(damageValue >= 10)
+		{
+			if(mState == EEnemyState::Shocked)
+			{
+				return;
+			}
+			else
+			{
+				//Damage 하고 싶다.
+				SetState(EEnemyState::Damage);
+				me->OnMyDamage(TEXT("Damage0"));
+			}
+		}
+		else
+		{
+			//SetState(EEnemyState::Damage);
+		}
+		
+		
 	}
 }
 

@@ -59,11 +59,17 @@ public:
 		class UEnemyAnim* enemyAnim;
 
 	UFUNCTION(BlueprintImplementableEvent)
-	void OnMyDamage();
+	void OnMyDamage(FName sectionName);
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnMyShock();
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnMyBurn();
+
+	//¿¡³Ê¹Ì HP
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	int hp;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	int maxHP = 30;
 };

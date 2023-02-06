@@ -93,7 +93,7 @@ public:
 
 	//히트리커버리 타임
 	UPROPERTY(EditAnywhere, Category = FSM)
-	float damageDelayTime = 2;
+	float damageDelayTime = 1.5;
 
 	//불붙는 이펙트 팩토리
 	UPROPERTY(EditAnywhere)
@@ -102,13 +102,9 @@ public:
 	//전기 충격 이펙트 팩토리
 	UPROPERTY(EditAnywhere)
 		class UParticleSystem* shockFactory;
-
-	//에너미 HP
-	int hp;
-	int maxHP;
-
+	
 	//피격 함수
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 		void OnDamageProcess(int damageValue);
 	
 
@@ -117,4 +113,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void OnHitEvent();
+
+	//죽음 완료 bool 변수
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool bDieEnd = false;
 };
