@@ -103,6 +103,7 @@ void AExplodable::ElectricShock()
 					{
 						//enemy 안에 있는 mstate를 shocked로 전이한다.
 						enemy->enemyFsm->mState = EEnemyState::Shocked;
+						enemy->OnMyShock();
 					}
 				}
 			}

@@ -37,6 +37,8 @@ void UEnemyFSM::BeginPlay()
 
 	mState = EEnemyState::Idle;
 
+	me->hp = me->maxHP;
+
 }
 
 
@@ -167,7 +169,7 @@ void UEnemyFSM::DieState()
 void UEnemyFSM::BurntState()
 {
 	//액터가 쓰러지는 애니메이션을 재생하고
-
+	me->OnMyBurn();
 	//액터에 불타는 이펙트를 스폰시킨다.
 	UGameplayStatics::SpawnEmitterAttached(fireFactory, me->GetMesh(), TEXT("Spine2Socket"));
 
@@ -178,17 +180,16 @@ void UEnemyFSM::ShockedState()
 {
 	//액터에 전기충격 이펙트를 스폰시킨다.
 	UGameplayStatics::SpawnEmitterAttached(shockFactory, me->GetMesh(), TEXT("Spine2Socket"));
-
+	
 	//1. 현재 시간에 시간을 누적시킨다.
 	currentTime += GetWorld()->DeltaTimeSeconds;
-
-
-
+	
 	//2. 누적 시간이 쇼크타임보다 커지면
 	if (currentTime > shockTime)
 
 		//3. FSM의 상태를 아이들로 전이한다.
 	{
+		me->StopAnimMontage();
 		SetState(EEnemyState::Idle);
 	}
 }
@@ -196,19 +197,45 @@ void UEnemyFSM::ShockedState()
 void UEnemyFSM::OnDamageProcess(int damageValue)
 {
 	//체력을 소모하고
-	hp -= damageValue;
+	me->hp -= damageValue;
 	//체력이 0이 되면
-	if(hp <= 0)
+	if(me->hp <= 0)
 	{
-		//Die 한다.
-		SetState(EEnemyState::Die);
+		if(bDieEnd == false)
+		{
+			//Die 한다.
+			SetState(EEnemyState::Die);
+			me->OnMyDamage(TEXT("Die"));
+			bDieEnd = true;
+		}
+		else
+		{
+			return;
+		}
 	}
 
 	//체력이 0보다 크면
 	else
 	{
-		//Damage 하고 싶다.
-		SetState(EEnemyState::Damage);
+		if(damageValue >= 10)
+		{
+			if(mState == EEnemyState::Shocked)
+			{
+				return;
+			}
+			else
+			{
+				//Damage 하고 싶다.
+				SetState(EEnemyState::Damage);
+				me->OnMyDamage(TEXT("Damage0"));
+			}
+		}
+		else
+		{
+			//SetState(EEnemyState::Damage);
+		}
+		
+		
 	}
 }
 
