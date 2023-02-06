@@ -7,6 +7,17 @@
   <component name="ChangeListManager">
     <list default="true" id="94807534-0f33-47e2-869a-01fa5f740240" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Enemy3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Enemy3.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Pickable_Herb.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Pickable_Herb.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Pickable_Key.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Pickable_Key.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/InteractionWidgetBullet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/InteractionWidgetBullet.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Biocandy.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Biocandy.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_BulletCount.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_BulletCount.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Pickable_Bullet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Pickable_Bullet.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,6 +275,7 @@
       <workItem from="1675406318007" duration="5550000" />
       <workItem from="1675650220398" duration="5000" />
       <workItem from="1675650232187" duration="1779000" />
+      <workItem from="1675656297581" duration="1886000" />
     </task>
     <servers />
   </component>
