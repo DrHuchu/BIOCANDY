@@ -172,7 +172,8 @@ void UEnemyFSM::BurntState()
 	me->OnMyBurn();
 	//액터에 불타는 이펙트를 스폰시킨다.
 	UGameplayStatics::SpawnEmitterAttached(fireFactory, me->GetMesh(), TEXT("Spine2Socket"));
-
+	bDieEnd = true;
+	me->hp = 0;
 	SetState(EEnemyState::Die);
 }
 
