@@ -34,7 +34,7 @@ APlayer_Jill::APlayer_Jill()
 	cameraComp->SetupAttachment(springArmComp);
 
 	//디테일의 스프링 암의 숫자를 변경
-	springArmComp->SetRelativeLocation(FVector(0, 50, 100));
+	springArmComp->SetRelativeLocation(FVector(0, 50, 60));
 	//디테일의 스프링 암의 숫자를 변경
 	springArmComp->TargetArmLength = 250.0f;
 
@@ -258,7 +258,7 @@ void APlayer_Jill::PistolAim()
 		// 스나이퍼 조준 UI 화면에서 제거
 		_sniperUI->RemoveFromParent();
 		// 카메라 시야각 원례대로 복원
-		cameraComp->SetFieldOfView(90.0f);
+		cameraComp->SetFieldOfView(60.0f);
 		// 일반 조준 UI 등록
 		//_crosshairUI->AddToViewport();
 		IsShootReady = false;
@@ -271,7 +271,7 @@ void APlayer_Jill::PistolAim()
 		// 스나이퍼 조준 UI 등록
 		_sniperUI->AddToViewport();
 		// 카메라의 시야각 Field Of View 설정
-		cameraComp->SetFieldOfView(45.0f);
+		cameraComp->SetFieldOfView(40.0f);
 		// 일반 조준 UI 제거
 		//_crosshairUI->RemoveFromParent();
 		IsShootReady = true;

@@ -160,6 +160,11 @@ public:
 	UPROPERTY(EditAnywhere)
 	bool canShoot = true;
 
+	
+	//FTimeline timeline;
+	UPROPERTY(EditAnywhere)
+	UCurveFloat* curveFloat;
+
 
 private:
 	float walkSpeed = 600;
