@@ -18,7 +18,7 @@ class BIOCANDY_API UEnemyAnim : public UAnimInstance
 		virtual void NativeBeginPlay() override;
 public:
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EEnemyState state;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)

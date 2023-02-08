@@ -12,6 +12,7 @@ UENUM(BlueprintType)
 enum class EEnemyState : uint8
 {
 	Idle,
+	Roam,
 	Move,
 	Attack,
 	Damage,
@@ -36,15 +37,18 @@ protected:
 public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
+	
 	
 	//상태 변수
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = FSM)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FSM)
 		EEnemyState mState = EEnemyState::Idle;
 
 	//대기상태
 	void IdleState();
 
+	//배회상태
+	void RoamState();
+	
 	//이동상태
 	void MoveState();
 
@@ -65,7 +69,7 @@ public:
 
 	//대기 시간
 	UPROPERTY(EditDefaultsOnly, Category = FSM)
-		float idleDelayTime = 2;
+		float idleDelayTime;
 
 	//경과 시간
 	float currentTime = 0;
@@ -89,6 +93,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = FSM)
 		float attackDelayTime = 2.0f;
 
+	//추격 범위
+	UPROPERTY(EditAnywhere, Category = FSM)
+	float chaseRange = 1500.0f;
+	
 	bool bAttackPlay;
 
 	//히트리커버리 타임
@@ -117,4 +125,9 @@ public:
 	//죽음 완료 bool 변수
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	bool bDieEnd = false;
+
+	// 에너미의 컨트롤러
+	class AAIController* ai;
+
+	
 };

@@ -12,6 +12,8 @@
 #include "Blueprint/UserWidget.h"
 #include "../BIOCANDY.h"
 #include "PlayerJillAnim.h"
+#include "Components/TimelineComponent.h"
+
 APlayer_Jill::APlayer_Jill()
 {
  	
@@ -85,11 +87,7 @@ void APlayer_Jill::BeginPlay()
 	ChangeToSK_Pistol();
 
 	// 스나이퍼 UI 위젯 인스턴스를 생성하고싶다.
-	_sniperUI = CreateWidget(GetWorld(), sniperUIFactory);
-	//일반 조준 UI 크로스헤어 인스턴스 생성
-	_crosshairUI = CreateWidget(GetWorld(), crosshairUIFactory);
-	//일반 조준 UI 등록
-	//_crosshairUI->AddToViewport();
+	pistolCrossHairUI = CreateWidget(GetWorld(), pistolCrossHairUIFactory);
 
 	//키 경고 UI 생성
 	keyWarningUI = CreateWidget(GetWorld(), keyWarningUIFactory);
@@ -108,6 +106,14 @@ void APlayer_Jill::BeginPlay()
 
 	// hp
 	hp = initialHp;
+
+	// 줌을 위한 curveFloat 존재 시 진행
+	if(curveFloat)
+	{
+		FOnTimelineFloat TimelineProgress;
+		TimelineProgress.BindDynamic(this, &APlayer_Jill::APlayer_Jill::Zoom);
+		timeline.AddInterpFloat(curveFloat, TimelineProgress);
+	}
 }
 
 // hp 체력 히트 이벤트
@@ -143,11 +149,18 @@ void APlayer_Jill::OnActionReload()
 	}
 }
 
+void APlayer_Jill::Zoom(float value)
+{
+	float zoomRate = 60 - 20 * value;
+	cameraComp->SetFieldOfView(zoomRate);
+}
+
 
 void APlayer_Jill::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	// direction 방향으로 이동하고 싶다.
+	timeline.TickTimeline(DeltaTime);
 
 	FTransform trans(GetControlRotation());
 	FVector resultDirection = trans.TransformVector(direction);
@@ -164,7 +177,7 @@ void APlayer_Jill::Tick(float DeltaTime)
 	//overlappingActors라는 배열을 생성한다.
 	TArray<AActor*> overlappingActors;
 
-	//overlappingActors 배열에 인터랙션 박스와 겹치는 액터들을 담는다.
+	//overlappingActors 배열에 인터랙션 박스와 겹치는 액터들을 담는다.+
 	interactionBox->GetOverlappingActors(overlappingActors);
 
 
@@ -245,35 +258,33 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 }
 void APlayer_Jill::PistolAim()
 {
-	//스나이퍼건 모드가 아니면 처리하지 않는다.
-	if (bSniperAim)
-	{
-		return;
-	}
 	// Pressed 입력 처리
 	if (bUsingSK_Pistol == false)
 	{
 		// 스나이퍼 조준 모드 활성화
 		bUsingSK_Pistol = true;
-		// 스나이퍼 조준 UI 화면에서 제거
-		_sniperUI->RemoveFromParent();
-		// 카메라 시야각 원례대로 복원
-		cameraComp->SetFieldOfView(60.0f);
-		// 일반 조준 UI 등록
-		//_crosshairUI->AddToViewport();
+		// 권총 크로스헤어 UI 화면에서 제거
+		pistolCrossHairUI->RemoveFromParent();
+		// 카메라 시야각 원래대로 복원
+		//cameraComp->SetFieldOfView(60.0f);
+		timeline.Reverse();
+		//권총 발사 준비 X
 		IsShootReady = false;
 	}
 	// Released 입력 처리
 	else
 	{
+		//잔탄 수 UI 제거 및 재표시
+		magUI->RemoveFromParent();
+		magUI->AddToViewport();
 		// 스나이퍼 조준 모드 비활성화
 		bUsingSK_Pistol = false;
-		// 스나이퍼 조준 UI 등록
-		_sniperUI->AddToViewport();
+		// 권총 크로스헤어 UI 화면에 추가
+		pistolCrossHairUI->AddToViewport();
 		// 카메라의 시야각 Field Of View 설정
-		cameraComp->SetFieldOfView(40.0f);
-		// 일반 조준 UI 제거
-		//_crosshairUI->RemoveFromParent();
+		//cameraComp->SetFieldOfView(40.0f);
+		timeline.Play();
+		//권총 발사 준비 O
 		IsShootReady = true;
 	}
 }
