@@ -8,6 +8,7 @@
 #include "EnemyAnim.h"
 
 #include "Components/SphereComponent.h"
+#include "Perception/PawnSensingComponent.h"
 
 // Sets default values
 AEnemy::AEnemy()
@@ -27,6 +28,8 @@ AEnemy::AEnemy()
 	}
 
 	enemyFsm = CreateDefaultSubobject<UEnemyFSM>(TEXT("FSM"));
+
+	pawnSensor = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("pawnSensor"));
 }
 
 // Called when the game starts or when spawned

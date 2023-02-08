@@ -52,11 +52,14 @@ public:
 
 
 	//적 AI관리 컴포넌트 클래스
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = FSMComponent)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FSMComponent)
 		class UEnemyFSM* enemyFsm;
 
 	UPROPERTY()
 		class UEnemyAnim* enemyAnim;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UPawnSensingComponent* pawnSensor;
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnMyDamage(FName sectionName);
@@ -72,4 +75,12 @@ public:
 	int hp;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	int maxHP = 30;
+
+	//에너미의 배회 함수 선언
+	UFUNCTION(BlueprintImplementableEvent)
+	void RandomRoam();
+
+	//배회 상태 완료 변수
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bRoamEnd = false;
 };

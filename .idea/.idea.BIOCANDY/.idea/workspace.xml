@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94807534-0f33-47e2-869a-01fa5f740240" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/EnemyFSM.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/EnemyFSM.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.31814894&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -265,7 +266,10 @@
       <workItem from="1675650220398" duration="5000" />
       <workItem from="1675650232187" duration="1779000" />
       <workItem from="1675656297581" duration="1886000" />
-      <workItem from="1675663198767" duration="1684000" />
+      <workItem from="1675663198767" duration="1936000" />
+      <workItem from="1675744024987" duration="19175000" />
+      <workItem from="1675816836167" duration="2202000" />
+      <workItem from="1675826857315" duration="2018000" />
     </task>
     <servers />
   </component>

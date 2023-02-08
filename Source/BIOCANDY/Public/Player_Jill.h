@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/TimelineComponent.h"
 #include "GameFramework/Character.h"
 #include "Player_Jill.generated.h"
 
@@ -64,10 +65,6 @@ public:
 	// 스나이퍼건으로 변경
 	void ChangeToSniperGun();
 
-	//zoom을 구현하고싶다. in/out
-	void OnActionZoomIn(); //확대 FOV 30
-	void OnActionZoomOut(); //확대 FOV 90
-
 	// 총알 파편 효과 공장
 	UPROPERTY(EditAnywhere, Category=BulletEffect)
 	class UParticleSystem* bulletEffectFactory;
@@ -80,20 +77,15 @@ public:
 
 	class IInteractionInterface* interface;
 
-	// 스나이퍼 확대 조준
+	//  권총 조준 함수 선언
 	void PistolAim();
 	// 스나이퍼 조준 중인지 여부
 	bool bSniperAim = false;
 	// 스나이퍼 UI 위젯 공장
-	UPROPERTY(EditDefaultsOnly, Category = SniperUI)
-	TSubclassOf<class UUserWidget> sniperUIFactory;
+	UPROPERTY(EditDefaultsOnly, Category = UI)
+	TSubclassOf<class UUserWidget> pistolCrossHairUIFactory;
 	// 스나이퍼 UI 위젯 인스턴스
-	class UUserWidget*_sniperUI;
-	// 일반 조준 크로스헤어 UI 위젯
-	UPROPERTY(EditAnywhere, Category = SniperUI)
-	TSubclassOf<class UUserWidget> crosshairUIFactory;
-	// 크로스헤어 인스턴스
-	class UUserWidget* _crosshairUI;
+	class UUserWidget*pistolCrossHairUI;
 
 	// 현재 체력
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category=Health)
@@ -161,9 +153,12 @@ public:
 	bool canShoot = true;
 
 	
-	//FTimeline timeline;
+	FTimeline timeline;
 	UPROPERTY(EditAnywhere)
 	UCurveFloat* curveFloat;
+
+	UFUNCTION()
+	void Zoom(float value);
 
 
 private:

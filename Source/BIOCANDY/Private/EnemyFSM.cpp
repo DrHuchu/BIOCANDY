@@ -3,10 +3,13 @@
 
 #include "EnemyFSM.h"
 
+#include "AIController.h"
 #include "Enemy.h"
 #include "EnemyAnim.h"
+#include "NavigationSystem.h"
 #include "Player_Jill.h"
 #include "Kismet/GameplayStatics.h"
+#include "Perception/PawnSensingComponent.h"
 
 // Sets default values for this component's properties
 UEnemyFSM::UEnemyFSM()
@@ -39,6 +42,12 @@ void UEnemyFSM::BeginPlay()
 
 	me->hp = me->maxHP;
 
+	// ai 컨트롤러 캐스팅하기
+	ai = Cast<AAIController>(me->GetController());
+
+	//최초로 아이들 대기 시간 한 번 설정
+	idleDelayTime = FMath::RandRange(0.0f, 8.0f);
+
 }
 
 
@@ -53,6 +62,10 @@ void UEnemyFSM::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	{
 	case EEnemyState::Idle:
 		IdleState();
+		break;
+
+	case EEnemyState::Roam:
+		RoamState();
 		break;
 
 	case EEnemyState::Move:
@@ -88,12 +101,22 @@ void UEnemyFSM::IdleState()
 
 	//2. 만약 경과 시간이 대기 시간을 초과했다면
 	if (currentTime > idleDelayTime)
-
-		//3. 이동상태로 전환하고 싶다.
+		//3. 배회 상태로 전환하고 싶다.
 	{
-		SetState(EEnemyState::Move);
 		//4. 경과 시간을 초기화한다.
 		currentTime = 0;
+		// 아이들 대기 시간을 랜덤으로 재설정한다.
+		idleDelayTime = FMath::RandRange(0, 5);
+		SetState(EEnemyState::Roam);
+	}
+}
+
+void UEnemyFSM::RoamState()
+{
+	if(me->bRoamEnd == false)
+	{
+		me->bRoamEnd = true;
+		me->RandomRoam();
 	}
 }
 
@@ -101,14 +124,27 @@ void UEnemyFSM::MoveState()
 {
 	//1. 타깃 목적지가 필요하다.
 	FVector destination = target->GetActorLocation();
-
+	
 	//2. 방향이 필요하다.
 	FVector dir = destination - me->GetActorLocation();
 
-	//3. 방향으로 이동하고 싶다.
-	me->AddMovementInput(dir.GetSafeNormal());
+	// A. 내가 갈 수 있는 길 위에 타겟이 있는가?
+	UNavigationSystemV1* ns = UNavigationSystemV1::GetNavigationSystem(GetWorld());
 
+	FPathFindingQuery query;
+	FAIMoveRequest request;
+	request.SetAcceptanceRadius(5);
+	request.SetGoalLocation(target->GetActorLocation());
+	ai->BuildPathfindingQuery(request, query);
+	
+	auto result = ns->FindPathSync(query);
 
+	// B. 갈 수 있다면 타겟 쪽으로 이동
+	if(result.Result == ENavigationQueryResult::Success)
+	{
+		ai->MoveToLocation(target->GetActorLocation());
+	}
+	
 	//타깃과 가까워지면 공격상태로 전환하고 싶다.
 	//1. 만약 거리가 공격 범위 안에 들어오면
 	if (dir.Size() < attackRange)
@@ -117,6 +153,10 @@ void UEnemyFSM::MoveState()
 	{
 		SetState(EEnemyState::Attack);
 	}
+	//if(dir.Size() < chaseRange)
+	//{
+	//	SetState(EEnemyState::Idle);
+	//}
 }
 
 void UEnemyFSM::AttackState()
@@ -163,6 +203,9 @@ void UEnemyFSM::DamageState()
 
 void UEnemyFSM::DieState()
 {
+	ai->StopMovement();
+	me->pawnSensor->bSeePawns = false;
+	me->pawnSensor->bHearNoises = false;
 	return;
 }
 
@@ -179,6 +222,9 @@ void UEnemyFSM::BurntState()
 
 void UEnemyFSM::ShockedState()
 {
+	me->pawnSensor->bSeePawns = false;
+	me->pawnSensor->bHearNoises = false;
+	ai->StopMovement();	
 	//액터에 전기충격 이펙트를 스폰시킨다.
 	UGameplayStatics::SpawnEmitterAttached(shockFactory, me->GetMesh(), TEXT("Spine2Socket"));
 	
@@ -190,13 +236,17 @@ void UEnemyFSM::ShockedState()
 
 		//3. FSM의 상태를 아이들로 전이한다.
 	{
+		currentTime = 0;
 		me->StopAnimMontage();
-		SetState(EEnemyState::Idle);
+		me->pawnSensor->bSeePawns = true;
+		me->pawnSensor->bHearNoises = true;
+		SetState(EEnemyState::Roam);
 	}
 }
 
 void UEnemyFSM::OnDamageProcess(int damageValue)
 {
+	
 	//체력을 소모하고
 	me->hp -= damageValue;
 	//체력이 0이 되면
@@ -226,6 +276,10 @@ void UEnemyFSM::OnDamageProcess(int damageValue)
 			}
 			else
 			{
+				if(ai)
+				{
+					ai->StopMovement();
+				}
 				//Damage 하고 싶다.
 				SetState(EEnemyState::Damage);
 				me->OnMyDamage(TEXT("Damage0"));
@@ -248,7 +302,10 @@ void UEnemyFSM::SetState(EEnemyState next)
 
 void UEnemyFSM::OnHitEvent()
 {
-	me->enemyAnim->bAttackPlay = false;
+	if(me)
+	{
+		me->enemyAnim->bAttackPlay = false;
+	}
 	bAttackPlay = true;
 	//3. 공격을 하고 (조건은 공격거리 안에 있는가?)
 	float dist = target->GetDistanceTo(me);
