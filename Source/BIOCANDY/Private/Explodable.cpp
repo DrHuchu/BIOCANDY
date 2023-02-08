@@ -68,7 +68,7 @@ void AExplodable::Explosion()
 
 			if(enemy)
 			{
-				enemy->enemyFsm->mState = EEnemyState::Burnt;
+				enemy->enemyFsm->SetState(EEnemyState::Burnt);
 			}
 		}
 		//스스로를 제거한다.
@@ -102,7 +102,7 @@ void AExplodable::ElectricShock()
 					if (enemy->enemyFsm->mState != EEnemyState::Die)
 					{
 						//enemy 안에 있는 mstate를 shocked로 전이한다.
-						enemy->enemyFsm->mState = EEnemyState::Shocked;
+						enemy->enemyFsm->SetState(EEnemyState::Shocked);
 						enemy->OnMyShock();
 					}
 				}
@@ -113,6 +113,7 @@ void AExplodable::ElectricShock()
 
 			//쇼크 카운트를 1 깎는다.
 			shockCount -= 1;
+			overlappingActors.Empty();
 
 		}
 		else
