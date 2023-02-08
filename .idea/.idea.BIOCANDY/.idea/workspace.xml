@@ -7,23 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="94807534-0f33-47e2-869a-01fa5f740240" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrint/ABP_Enemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/ABP_Enemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Enemy2.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Enemy3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Enemy3.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/Biocandy.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Biocandy.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Mixamo/WarZombie/mixamoconverter/Mixamo_Anim/zombiewalk_UE.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mixamo/WarZombie/mixamoconverter/Mixamo_Anim/zombiewalk_UE.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/BIOCANDY.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/BIOCANDY.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Enemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Enemy.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/EnemyFSM.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/EnemyFSM.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Explodable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Explodable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Player_Jill.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Player_Jill.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Public/Enemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Public/Enemy.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Public/EnemyAnim.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Public/EnemyAnim.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Public/EnemyFSM.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Public/EnemyFSM.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Public/Player_Jill.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Public/Player_Jill.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +269,7 @@
       <workItem from="1675663198767" duration="1936000" />
       <workItem from="1675744024987" duration="19175000" />
       <workItem from="1675816836167" duration="2202000" />
-      <workItem from="1675826857315" duration="708000" />
+      <workItem from="1675826857315" duration="2018000" />
     </task>
     <servers />
   </component>
