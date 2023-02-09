@@ -84,6 +84,9 @@ void APlayer_Jill::BeginPlay()
 	// 잔탄 UI 생성
 	magUI = CreateWidget(GetWorld(), magUIFactory);
 
+	//피격 효과 UI 생성
+	damagedUI = CreateWidget(GetWorld(), damagedUIFactory);
+
 	// hp
 	hp = maxHP;
 
@@ -234,6 +237,18 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	//재장전
 	PlayerInputComponent->BindAction(TEXT("Reload"), IE_Pressed, this,&APlayer_Jill::OnActionReload);
 }
+
+void APlayer_Jill::OnMyHit_Implementation(int AttackDamage)
+{
+	hp -= AttackDamage;
+	if(damagedUI->IsInViewport())
+	{
+		damagedUI->RemoveFromParent();
+	}
+	damagedUI->AddToViewport();
+	UE_LOG(LogTemp, Warning, TEXT("Damaged"));
+}
+
 void APlayer_Jill::PistolAim()
 {
 	// Pressed 입력 처리
@@ -242,7 +257,10 @@ void APlayer_Jill::PistolAim()
 			// 스나이퍼 조준 모드 활성화
 			bUsingSK_Pistol = true;
 			// 권총 크로스헤어 UI 화면에서 제거
+		if(pistolCrossHairUI->IsInViewport())
+		{
 			pistolCrossHairUI->RemoveFromParent();
+		}
 			// 카메라 시야각 원래대로 복원
 			//cameraComp->SetFieldOfView(60.0f);
 			timeline.Reverse();
@@ -253,12 +271,18 @@ void APlayer_Jill::PistolAim()
 	else
 	{
 			//잔탄 수 UI 제거 및 재표시
+		if(magUI->IsInViewport())
+		{
 			magUI->RemoveFromParent();
+		}
 			magUI->AddToViewport();
 			// 스나이퍼 조준 모드 비활성화
 			bUsingSK_Pistol = false;
 			// 권총 크로스헤어 UI 화면에 추가
+		if(pistolCrossHairUI->IsInViewport())
+		{
 			pistolCrossHairUI->RemoveFromParent();
+		}
 			pistolCrossHairUI->AddToViewport();
 			// 카메라의 시야각 Field Of View 설정
 			//cameraComp->SetFieldOfView(40.0f);

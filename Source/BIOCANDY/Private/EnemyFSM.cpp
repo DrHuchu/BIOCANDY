@@ -93,10 +93,6 @@ void UEnemyFSM::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	case EEnemyState::Shocked:
 		ShockedState();
 		break;
-
-	case EEnemyState::Prone:
-		ProneState();
-		break;
 	}
 }
 
@@ -221,6 +217,7 @@ void UEnemyFSM::DieState()
 	ai->StopMovement();
 	me->pawnSensor->bSeePawns = false;
 	me->pawnSensor->bHearNoises = false;
+	me->GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
 	return;
 }
 
@@ -257,11 +254,6 @@ void UEnemyFSM::ShockedState()
 		me->pawnSensor->bHearNoises = true;
 		SetState(EEnemyState::Roam);
 	}
-}
-
-void UEnemyFSM::ProneState()
-{
-	ai->StopMovement();
 }
 
 void UEnemyFSM::OnDamageProcess(int damageValue)
@@ -331,7 +323,8 @@ void UEnemyFSM::OnHitEvent()
 	float dist = target->GetDistanceTo(me);
 	if (dist <= attackRange)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Enemy is Attack"));
+		target->OnMyHit(attackDamage);
+		//UE_LOG(LogTemp, Warning, TEXT("Enemy is Attack"));
 	}
 }
 

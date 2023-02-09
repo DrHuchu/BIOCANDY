@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EnemyFSM.h"
 #include "Components/TimelineComponent.h"
 #include "GameFramework/Character.h"
 #include "Player_Jill.generated.h"
@@ -21,6 +22,8 @@ protected:
 public:	
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	UFUNCTION(BlueprintNativeEvent)
+	void OnMyHit(int AttackDamage);
 
 	UPROPERTY(EditAnywhere)
 	class USpringArmComponent* springArmComp;
@@ -74,10 +77,10 @@ public:
 	class UUserWidget*pistolCrossHairUI;
 
 	// 현재 체력
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category=Health)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Health)
 	int32 hp;
 	// 초기 hp값
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category=Health)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Health)
 	int32 maxHP = 10;
 	// 피격 당했을 때 처리
 	UFUNCTION(BlueprintCallable, Category = Health)
@@ -138,6 +141,10 @@ public:
 	UPROPERTY(EditAnywhere)
 	bool canShoot = true;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	class UUserWidget* damagedUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+	TSubclassOf<class UUserWidget> damagedUIFactory;
 	
 	FTimeline timeline;
 	UPROPERTY(EditAnywhere)

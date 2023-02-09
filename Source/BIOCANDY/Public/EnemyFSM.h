@@ -19,7 +19,6 @@ enum class EEnemyState : uint8
 	Die,
 	Burnt,
 	Shocked,
-	Prone,
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -67,10 +66,7 @@ public:
 
 	//쇼크상태
 	void ShockedState();
-
-	//죽은 척 상태
-	void ProneState();
-
+	
 	//대기 시간
 	UPROPERTY(EditDefaultsOnly, Category = FSM)
 		float idleDelayTime;
@@ -99,6 +95,10 @@ public:
 	//공격 대기 시간
 	UPROPERTY(EditAnywhere, Category = FSM)
 		float attackDelayTime = 2.0f;
+
+	//공격 데미지
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int attackDamage;
 
 	//추격 범위
 	UPROPERTY(EditAnywhere, Category = FSM)
