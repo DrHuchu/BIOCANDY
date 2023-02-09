@@ -7,6 +7,16 @@
   <component name="ChangeListManager">
     <list default="true" id="94807534-0f33-47e2-869a-01fa5f740240" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animaiton/ABP_PlayerJill.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Animaiton/ABP_PlayerJill.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animaiton/W1_Stand_Aim_Idle_IPC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Animaiton/W1_Stand_Aim_Idle_IPC.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animaiton/W1_Stand_Aim_Idle_IPC1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Animaiton/W1_Stand_Aim_Idle_IPC1.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animaiton/W1_Stand_Aim_Idle_IPC2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Animaiton/W1_Stand_Aim_Idle_IPC2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Biocandy.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Biocandy.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Montage/W1_Stand_Aim_Idle_IPC2_Montage.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Montage/W1_Stand_Aim_Idle_IPC2_Montage.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,6 +280,7 @@
       <workItem from="1675744024987" duration="19175000" />
       <workItem from="1675816836167" duration="2202000" />
       <workItem from="1675826857315" duration="2018000" />
+      <workItem from="1675846067259" duration="797000" />
     </task>
     <servers />
   </component>
