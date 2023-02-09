@@ -55,22 +55,9 @@ public:
 
 	// 총알 발사 처리 함수
 	void InputFire();
-	//스나이퍼건 스태틱메시 추가
-	UPROPERTY(EditAnywhere, Category=GunMesh)
-	class UStaticMeshComponent* sniperGunComp;
+	
 	//권총 사용 중인지 여부
 	bool bUsingSK_Pistol = true;
-	// 권총으로 변경
-	void ChangeToSK_Pistol();
-	// 스나이퍼건으로 변경
-	void ChangeToSniperGun();
-
-	// 총알 파편 효과 공장
-	UPROPERTY(EditAnywhere, Category=BulletEffect)
-	class UParticleSystem* bulletEffectFactory;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-		FHitResult hitInfo;
 
 	UPROPERTY(EditAnywhere)
 	class UBoxComponent* interactionBox;
@@ -79,8 +66,7 @@ public:
 
 	//  권총 조준 함수 선언
 	void PistolAim();
-	// 스나이퍼 조준 중인지 여부
-	bool bSniperAim = false;
+
 	// 스나이퍼 UI 위젯 공장
 	UPROPERTY(EditDefaultsOnly, Category = UI)
 	TSubclassOf<class UUserWidget> pistolCrossHairUIFactory;
@@ -92,7 +78,7 @@ public:
 	int32 hp;
 	// 초기 hp값
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category=Health)
-	int32 initialHp = 10;
+	int32 maxHP = 10;
 	// 피격 당했을 때 처리
 	UFUNCTION(BlueprintCallable, Category = Health)
 	void OnHitEvent();

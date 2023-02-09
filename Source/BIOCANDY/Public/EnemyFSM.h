@@ -19,6 +19,7 @@ enum class EEnemyState : uint8
 	Die,
 	Burnt,
 	Shocked,
+	Prone,
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -67,6 +68,9 @@ public:
 	//쇼크상태
 	void ShockedState();
 
+	//죽은 척 상태
+	void ProneState();
+
 	//대기 시간
 	UPROPERTY(EditDefaultsOnly, Category = FSM)
 		float idleDelayTime;
@@ -88,6 +92,9 @@ public:
 	//공격 범위
 	UPROPERTY(EditAnywhere, Category = FSM)
 		float attackRange = 150.0f;
+
+	//공격 좌우 랜덤
+	int randIntAttackSide;
 
 	//공격 대기 시간
 	UPROPERTY(EditAnywhere, Category = FSM)
@@ -129,5 +136,10 @@ public:
 	// 에너미의 컨트롤러
 	class AAIController* ai;
 
+	UFUNCTION(BlueprintCallable)
+	void OnZombieRun();
+
+	UFUNCTION(BlueprintCallable)
+	void OffZombieRun();
 	
 };
