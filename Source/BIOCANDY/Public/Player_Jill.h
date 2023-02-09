@@ -129,8 +129,14 @@ public:
 
 	//ÅºÃ¢¸Þ°ÅÁø, ÀçÀåÀü
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void OnActionReload();
+
+	UFUNCTION()
+	void Reload();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class USoundBase* reloadingSound;
 
 	//ÃÑÅºÃ¢, ÅºÃ¢ MAX, ÅºÃ¢ °¡¹æ
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -140,6 +146,9 @@ public:
 	int pistolCountBag = 30;
 	UPROPERTY(EditAnywhere)
 	bool canShoot = true;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool bIsReloading = false;
+	
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
 	class UUserWidget* damagedUI;

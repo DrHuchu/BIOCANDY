@@ -112,7 +112,14 @@ void APlayer_Jill::OnHitEvent()
 	}
 }
 //재장전
-void APlayer_Jill::OnActionReload()
+void APlayer_Jill::OnActionReload_Implementation()
+{
+	bIsReloading = true;
+	FTimerHandle reloadTimer;
+	GetWorldTimerManager().SetTimer(reloadTimer, this, &APlayer_Jill::Reload, 2.2f, false);
+}
+
+void APlayer_Jill::Reload()
 {
 	//탄창에 남아있는 총알의 숫자가 탄탕의 최대치보다 작을때
 	if (pistolCountMag < maxPistolCountMag)
@@ -124,11 +131,13 @@ void APlayer_Jill::OnActionReload()
 			{
 				pistolCountBag = pistolCountBag - (maxPistolCountMag - pistolCountMag);
 				pistolCountMag = pistolCountMag + (maxPistolCountMag - pistolCountMag);
+				bIsReloading = false;
 			}
 			else
 			{
 				pistolCountBag =0;
 				pistolCountMag = pistolCountMag + (maxPistolCountMag - pistolCountMag);
+				bIsReloading = false;
 			}
 		}
 	}
@@ -153,7 +162,7 @@ void APlayer_Jill::Tick(float DeltaTime)
 	resultDirection.Z = 0;
 	resultDirection.Normalize();
 
-	AddMovementInput(resultDirection);
+	AddMovementInput(resultDirection.GetSafeNormal());
 
 	direction = FVector::ZeroVector;
 
