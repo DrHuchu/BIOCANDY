@@ -12,6 +12,7 @@
 #include "Blueprint/UserWidget.h"
 #include "../BIOCANDY.h"
 #include "PlayerJillAnim.h"
+#include "Components/SphereComponent.h"
 #include "Components/TimelineComponent.h"
 
 APlayer_Jill::APlayer_Jill()
@@ -59,6 +60,10 @@ APlayer_Jill::APlayer_Jill()
 	//인터랙션을 위한 박스콜리전 생성
 	interactionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Interaction Box"));
 	interactionBox->SetupAttachment(RootComponent);
+
+	//게임오버 때 주변 좀비 상태 전이를 위한 스피어 콜리전 생성
+	gameOverSphere = CreateDefaultSubobject<USphereComponent>(TEXT("gameOverSphere"));
+	gameOverSphere->SetupAttachment(RootComponent);
 }
 
 void APlayer_Jill::BeginPlay()
@@ -87,6 +92,9 @@ void APlayer_Jill::BeginPlay()
 	//피격 효과 UI 생성
 	damagedUI = CreateWidget(GetWorld(), damagedUIFactory);
 
+	//게임 오버 UI 생성
+	gameOverUI = CreateWidget(GetWorld(), gameOverUIFactory);
+
 	// hp
 	hp = maxHP;
 
@@ -114,33 +122,33 @@ void APlayer_Jill::OnHitEvent()
 //재장전
 void APlayer_Jill::OnActionReload_Implementation()
 {
-	bIsReloading = true;
-	FTimerHandle reloadTimer;
-	GetWorldTimerManager().SetTimer(reloadTimer, this, &APlayer_Jill::Reload, 2.2f, false);
+		bIsReloading = true;
+		FTimerHandle reloadTimer;
+		GetWorldTimerManager().SetTimer(reloadTimer, this, &APlayer_Jill::Reload, 2.2f, false);
 }
 
 void APlayer_Jill::Reload()
 {
-	//탄창에 남아있는 총알의 숫자가 탄탕의 최대치보다 작을때
-	if (pistolCountMag < maxPistolCountMag)
-	{
-		// 재장전한다.
-		if (pistolCountBag != 0)
+		//탄창에 남아있는 총알의 숫자가 탄탕의 최대치보다 작을때
+		if (pistolCountMag < maxPistolCountMag)
 		{
-			if (pistolCountBag > (maxPistolCountMag - pistolCountMag))
+			// 재장전한다.
+			if (pistolCountBag != 0)
 			{
-				pistolCountBag = pistolCountBag - (maxPistolCountMag - pistolCountMag);
-				pistolCountMag = pistolCountMag + (maxPistolCountMag - pistolCountMag);
-				bIsReloading = false;
-			}
-			else
-			{
-				pistolCountBag =0;
-				pistolCountMag = pistolCountMag + (maxPistolCountMag - pistolCountMag);
-				bIsReloading = false;
+				if (pistolCountBag >= (maxPistolCountMag - pistolCountMag))
+				{
+					pistolCountBag = pistolCountBag - (maxPistolCountMag - pistolCountMag);
+					pistolCountMag = pistolCountMag + (maxPistolCountMag - pistolCountMag);
+					bIsReloading = false;
+				}
+				else
+				{
+					pistolCountMag = pistolCountMag + pistolCountBag;
+					pistolCountBag = 0;
+					bIsReloading = false;
+				}
 			}
 		}
-	}
 }
 
 void APlayer_Jill::Zoom(float value)
@@ -247,15 +255,47 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction(TEXT("Reload"), IE_Pressed, this,&APlayer_Jill::OnActionReload);
 }
 
+void APlayer_Jill::OnMyGameOver_Implementation()
+{
+	TArray<AActor*> overlappingActors;
+	gameOverSphere->GetOverlappingActors(overlappingActors);
+
+	for(auto currentActor : overlappingActors)
+	{
+		enemy = Cast<AEnemy>(currentActor);
+		if(enemy)
+		{
+			if(enemy->enemyFsm->mState != EEnemyState::Die)
+			{
+				enemy->enemyFsm->SetState(EEnemyState::Eating);
+				enemy->OnMyEating();
+			}
+		}
+	}
+	SetActorEnableCollision(false);
+}
+
 void APlayer_Jill::OnMyHit_Implementation(int AttackDamage)
 {
 	hp -= AttackDamage;
-	if(damagedUI->IsInViewport())
+
+	if(bIsOver == false)
 	{
-		damagedUI->RemoveFromParent();
+		if(hp <= 0)
+		{
+			bIsOver = true;
+			OnMyGameOver();
+		}
+		else
+		{
+			if(damagedUI->IsInViewport())
+			{
+				damagedUI->RemoveFromParent();
+			}
+			damagedUI->AddToViewport();
+		}
 	}
-	damagedUI->AddToViewport();
-	UE_LOG(LogTemp, Warning, TEXT("Damaged"));
+	
 }
 
 void APlayer_Jill::PistolAim()

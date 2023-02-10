@@ -22,9 +22,20 @@ protected:
 public:	
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	//ÇÃ·¹ÀÌ¾î ÇÇ°Ý ÇÔ¼ö
 	UFUNCTION(BlueprintNativeEvent)
 	void OnMyHit(int AttackDamage);
+	//ÇÃ·¹ÀÌ¾î Á×À½ ÇÔ¼ö
+	UFUNCTION(BlueprintNativeEvent)
+	void OnMyGameOver();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bIsOver = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	class USphereComponent* gameOverSphere;
+	
 	UPROPERTY(EditAnywhere)
 	class USpringArmComponent* springArmComp;
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
@@ -141,6 +152,7 @@ public:
 	//ÃÑÅºÃ¢, ÅºÃ¢ MAX, ÅºÃ¢ °¡¹æ
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int pistolCountMag;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int maxPistolCountMag = 15;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int pistolCountBag = 30;
@@ -161,7 +173,14 @@ public:
 
 	UFUNCTION()
 	void Zoom(float value);
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	class UUserWidget* gameOverUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+	TSubclassOf<class UUserWidget> gameOverUIFactory;
 
+	UPROPERTY()
+	class AEnemy* enemy;
 
 private:
 	float walkSpeed = 600;

@@ -93,6 +93,10 @@ void UEnemyFSM::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	case EEnemyState::Shocked:
 		ShockedState();
 		break;
+
+	case EEnemyState::Eating:
+		EatingState();
+		break;
 	}
 }
 
@@ -254,6 +258,13 @@ void UEnemyFSM::ShockedState()
 		me->pawnSensor->bHearNoises = true;
 		SetState(EEnemyState::Roam);
 	}
+}
+
+void UEnemyFSM::EatingState()
+{
+	ai->StopMovement();
+	me->pawnSensor->bSeePawns = false;
+	me->pawnSensor->bHearNoises = false;
 }
 
 void UEnemyFSM::OnDamageProcess(int damageValue)

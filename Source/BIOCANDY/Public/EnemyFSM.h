@@ -19,6 +19,7 @@ enum class EEnemyState : uint8
 	Die,
 	Burnt,
 	Shocked,
+	Eating,
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -66,6 +67,9 @@ public:
 
 	//쇼크상태
 	void ShockedState();
+
+	//포식상태
+	void EatingState();
 	
 	//대기 시간
 	UPROPERTY(EditDefaultsOnly, Category = FSM)
