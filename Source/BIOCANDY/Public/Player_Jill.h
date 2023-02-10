@@ -75,7 +75,6 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	class UBoxComponent* interactionBox;
-
 	class IInteractionInterface* interface;
 
 	//  권총 조준 함수 선언
@@ -85,6 +84,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = UI)
 	TSubclassOf<class UUserWidget> pistolCrossHairUIFactory;
 	// 스나이퍼 UI 위젯 인스턴스
+	UPROPERTY()
 	class UUserWidget*pistolCrossHairUI;
 
 	// 현재 체력
@@ -166,7 +166,8 @@ public:
 	class UUserWidget* damagedUI;
 	UPROPERTY(EditAnywhere, Category = UI)
 	TSubclassOf<class UUserWidget> damagedUIFactory;
-	
+
+	UPROPERTY()
 	FTimeline timeline;
 	UPROPERTY(EditAnywhere)
 	UCurveFloat* curveFloat;
