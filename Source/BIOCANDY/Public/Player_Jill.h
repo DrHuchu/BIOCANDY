@@ -21,6 +21,7 @@ protected:
 
 public:	
 	virtual void Tick(float DeltaTime) override;
+	
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	//플레이어 피격 함수
@@ -142,6 +143,11 @@ public:
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void OnActionReload();
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnActionInventory();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bIsInventoryOn;
 
 	UFUNCTION()
 	void Reload();

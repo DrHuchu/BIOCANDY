@@ -6,14 +6,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94807534-0f33-47e2-869a-01fa5f740240" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/CurveFloat/CameraCurveFloat.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/NewCameraAnimationSequence.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Ammo_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/G17_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Herb_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Box_Basic_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Box_Highlight_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Box_None_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Box_Num_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Key_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Text_Line_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_Ammo_Text.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_G19_Text.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_Herb_Text.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_InventoryUI.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_Key_Text.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/20230210200413_1.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Animaiton/ABP_PlayerJill.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Animaiton/ABP_PlayerJill.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Animaiton/W1_Stand_Aim_Reload1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Animaiton/W1_Stand_Aim_Reload1.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/Biocandy.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Biocandy.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MyContent/Characters/Jill2/uploads_files_3391191_JillValentine_Classic.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MyContent/Characters/Jill2/uploads_files_3391191_JillValentine_Classic.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MyContent/Characters/Jill2/uploads_files_3391191_JillValentine_Classic_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MyContent/Characters/Jill2/uploads_files_3391191_JillValentine_Classic_Skeleton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SFX/BulletCUe.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SFX/BulletCUe.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SFX/MetalCue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SFX/MetalCue.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Player_Jill.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Player_Jill.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Public/Player_Jill.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Public/Player_Jill.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,6 +306,7 @@
       <workItem from="1675965422296" duration="5594000" />
       <workItem from="1675991214702" duration="8948000" />
       <workItem from="1676019810721" duration="1110000" />
+      <workItem from="1676023668783" duration="2082000" />
     </task>
     <servers />
   </component>
