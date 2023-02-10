@@ -12,6 +12,7 @@
 #include "Blueprint/UserWidget.h"
 #include "../BIOCANDY.h"
 #include "PlayerJillAnim.h"
+#include "Components/SphereComponent.h"
 #include "Components/TimelineComponent.h"
 
 APlayer_Jill::APlayer_Jill()
@@ -55,36 +56,20 @@ APlayer_Jill::APlayer_Jill()
 	gunMeshComp = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMeshComp"));
 	//부모 컴포넌트를 Mesh 컴포넌트로 설정
 	gunMeshComp->SetupAttachment(GetMesh());
-
-	//5. 스나이퍼건 컴포넌트 등록
-	sniperGunComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SniperGunComp"));
-	//5-1 부모 컴포넌트를 Mesh 컴포넌트로 설정
-	sniperGunComp->SetupAttachment(GetMesh());
-	//5-2 스태틱메시 데이터 로드 
-	// 스나이퍼건의 에셋을 읽어서 컴포넌트에 넣고싶다.
-	ConstructorHelpers::FObjectFinder<UStaticMesh> TempSniperMesh(TEXT("/Script/Engine.StaticMesh'/Game/SniperGun/sniper1.sniper1'"));
-	//5-3 데이터로드가 성공했다면
-	if (TempSniperMesh.Succeeded())
-	{
-		//5.4 스태틱메시 데이터 할당
-		sniperGunComp->SetStaticMesh(TempSniperMesh.Object);
-		//5.5 위치 조정하기
-		sniperGunComp->SetRelativeLocationAndRotation(FVector(-1.65f, 27.06f, 50.34f), FRotator(0, 0, 0));
-		//5.6 크기 조정하기
-		sniperGunComp->SetRelativeScale3D(FVector(0.15f));
-	}
 	
-
 	//인터랙션을 위한 박스콜리전 생성
 	interactionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Interaction Box"));
 	interactionBox->SetupAttachment(RootComponent);
+
+	//게임오버 때 주변 좀비 상태 전이를 위한 스피어 콜리전 생성
+	gameOverSphere = CreateDefaultSubobject<USphereComponent>(TEXT("gameOverSphere"));
+	gameOverSphere->SetupAttachment(RootComponent);
 }
 
 void APlayer_Jill::BeginPlay()
 {
 	Super::BeginPlay();
 	// 기본으로 권총으로 사용하도록 설정
-	ChangeToSK_Pistol();
 
 	// 스나이퍼 UI 위젯 인스턴스를 생성하고싶다.
 	pistolCrossHairUI = CreateWidget(GetWorld(), pistolCrossHairUIFactory);
@@ -104,8 +89,16 @@ void APlayer_Jill::BeginPlay()
 	// 잔탄 UI 생성
 	magUI = CreateWidget(GetWorld(), magUIFactory);
 
+	//피격 효과 UI 생성
+	damagedUI = CreateWidget(GetWorld(), damagedUIFactory);
+
+	//게임 오버 UI 생성
+	gameOverUI = CreateWidget(GetWorld(), gameOverUIFactory);
+
 	// hp
-	hp = initialHp;
+	hp = maxHP;
+
+	cameraComp->SetFieldOfView(60);
 
 	// 줌을 위한 curveFloat 존재 시 진행
 	if(curveFloat)
@@ -119,34 +112,43 @@ void APlayer_Jill::BeginPlay()
 // hp 체력 히트 이벤트
 void APlayer_Jill::OnHitEvent()
 {
-	PRINT_LOG(TEXT("Damaged !!!!!")); 
+	UE_LOG(LogTemp, Warning, TEXT("Damaged"));
 	hp--;
 	if (hp <= 0)
 	{
-		PRINT_LOG(TEXT("Player is dead!"));
+		UE_LOG(LogTemp, Warning, TEXT("Dead"));
 	}
 }
 //재장전
-void APlayer_Jill::OnActionReload()
+void APlayer_Jill::OnActionReload_Implementation()
 {
-	//탄창에 남아있는 총알의 숫자가 탄탕의 최대치보다 작을때
-	if (pistolCountMag < maxPistolCountMag)
-	{
-		// 재장전한다.
-		if (pistolCountBag != 0)
+		bIsReloading = true;
+		FTimerHandle reloadTimer;
+		GetWorldTimerManager().SetTimer(reloadTimer, this, &APlayer_Jill::Reload, 2.2f, false);
+}
+
+void APlayer_Jill::Reload()
+{
+		//탄창에 남아있는 총알의 숫자가 탄탕의 최대치보다 작을때
+		if (pistolCountMag < maxPistolCountMag)
 		{
-			if (pistolCountBag > (maxPistolCountMag - pistolCountMag))
+			// 재장전한다.
+			if (pistolCountBag != 0)
 			{
-				pistolCountBag = pistolCountBag - (maxPistolCountMag - pistolCountMag);
-				pistolCountMag = pistolCountMag + (maxPistolCountMag - pistolCountMag);
-			}
-			else
-			{
-				pistolCountBag =0;
-				pistolCountMag = pistolCountMag + (maxPistolCountMag - pistolCountMag);
+				if (pistolCountBag >= (maxPistolCountMag - pistolCountMag))
+				{
+					pistolCountBag = pistolCountBag - (maxPistolCountMag - pistolCountMag);
+					pistolCountMag = pistolCountMag + (maxPistolCountMag - pistolCountMag);
+					bIsReloading = false;
+				}
+				else
+				{
+					pistolCountMag = pistolCountMag + pistolCountBag;
+					pistolCountBag = 0;
+					bIsReloading = false;
+				}
 			}
 		}
-	}
 }
 
 void APlayer_Jill::Zoom(float value)
@@ -168,7 +170,7 @@ void APlayer_Jill::Tick(float DeltaTime)
 	resultDirection.Z = 0;
 	resultDirection.Normalize();
 
-	AddMovementInput(resultDirection);
+	AddMovementInput(resultDirection.GetSafeNormal());
 
 	direction = FVector::ZeroVector;
 
@@ -241,10 +243,6 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	//총알 발사 이벤트 처리 함수 바인딩
 	PlayerInputComponent->BindAction(TEXT("Fire"), IE_Pressed, this, &APlayer_Jill::InputFire);
 
-	PlayerInputComponent->BindAction(TEXT("SK_Pistol"), IE_Pressed, this, &APlayer_Jill::ChangeToSK_Pistol);
-	//총 교체 이벤트 처리 함수 바인딩
-	PlayerInputComponent->BindAction(TEXT("sniperGun"), IE_Pressed, this, &APlayer_Jill::ChangeToSniperGun);
-
 	//인터랙션 함수 바인딩
 	PlayerInputComponent->BindAction(TEXT("Interaction"), IE_Pressed, this, &APlayer_Jill::OnInteract);
 	PlayerInputComponent->BindAction(TEXT("Interaction"), IE_Released, this, &APlayer_Jill::OffInteract);
@@ -256,36 +254,91 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	//재장전
 	PlayerInputComponent->BindAction(TEXT("Reload"), IE_Pressed, this,&APlayer_Jill::OnActionReload);
 }
+
+void APlayer_Jill::OnMyGameOver_Implementation()
+{
+	TArray<AActor*> overlappingActors;
+	gameOverSphere->GetOverlappingActors(overlappingActors);
+
+	for(auto currentActor : overlappingActors)
+	{
+		enemy = Cast<AEnemy>(currentActor);
+		if(enemy)
+		{
+			if(enemy->enemyFsm->mState != EEnemyState::Die)
+			{
+				enemy->enemyFsm->SetState(EEnemyState::Eating);
+				enemy->OnMyEating();
+			}
+		}
+	}
+	SetActorEnableCollision(false);
+}
+
+void APlayer_Jill::OnMyHit_Implementation(int AttackDamage)
+{
+	hp -= AttackDamage;
+
+	if(bIsOver == false)
+	{
+		if(hp <= 0)
+		{
+			bIsOver = true;
+			OnMyGameOver();
+		}
+		else
+		{
+			if(damagedUI->IsInViewport())
+			{
+				damagedUI->RemoveFromParent();
+			}
+			damagedUI->AddToViewport();
+		}
+	}
+	
+}
+
 void APlayer_Jill::PistolAim()
 {
 	// Pressed 입력 처리
 	if (bUsingSK_Pistol == false)
 	{
-		// 스나이퍼 조준 모드 활성화
-		bUsingSK_Pistol = true;
-		// 권총 크로스헤어 UI 화면에서 제거
-		pistolCrossHairUI->RemoveFromParent();
-		// 카메라 시야각 원래대로 복원
-		//cameraComp->SetFieldOfView(60.0f);
-		timeline.Reverse();
-		//권총 발사 준비 X
-		IsShootReady = false;
+			// 스나이퍼 조준 모드 활성화
+			bUsingSK_Pistol = true;
+			// 권총 크로스헤어 UI 화면에서 제거
+		if(pistolCrossHairUI->IsInViewport())
+		{
+			pistolCrossHairUI->RemoveFromParent();
+		}
+			// 카메라 시야각 원래대로 복원
+			//cameraComp->SetFieldOfView(60.0f);
+			timeline.Reverse();
+			//권총 발사 준비 X
+			IsShootReady = false;
 	}
 	// Released 입력 처리
 	else
 	{
-		//잔탄 수 UI 제거 및 재표시
-		magUI->RemoveFromParent();
-		magUI->AddToViewport();
-		// 스나이퍼 조준 모드 비활성화
-		bUsingSK_Pistol = false;
-		// 권총 크로스헤어 UI 화면에 추가
-		pistolCrossHairUI->AddToViewport();
-		// 카메라의 시야각 Field Of View 설정
-		//cameraComp->SetFieldOfView(40.0f);
-		timeline.Play();
-		//권총 발사 준비 O
-		IsShootReady = true;
+			//잔탄 수 UI 제거 및 재표시
+		if(magUI->IsInViewport())
+		{
+			magUI->RemoveFromParent();
+		}
+			magUI->AddToViewport();
+			// 스나이퍼 조준 모드 비활성화
+			bUsingSK_Pistol = false;
+			// 권총 크로스헤어 UI 화면에 추가
+		if(pistolCrossHairUI->IsInViewport())
+		{
+			pistolCrossHairUI->RemoveFromParent();
+		}
+			pistolCrossHairUI->AddToViewport();
+			// 카메라의 시야각 Field Of View 설정
+			//cameraComp->SetFieldOfView(40.0f);
+			timeline.Play();
+			//권총 발사 준비 O
+			IsShootReady = true;
+		
 	}
 }
 
@@ -346,56 +399,5 @@ void APlayer_Jill::StopSprinting()
 
 void APlayer_Jill::InputFire()
 {
-	//총쏘는 애니메이션을 재생하고 싶다.
-	//auto anim = Cast<UPlayerJillAnim>(GetMesh()->GetAnimInstance());
-
-	//총을 쏠때 총알이 남아있는지 확인
-	// 만약 남아있다면 1발 차감
-	// 그렇지 않다면 총을 쏘지 않는다.
-	// if (bUsingSK_Pistol)
-	// {
-	// 	if (pistolCountMag > 0)
-	// 	{
-	// 		pistolCountMag--;
-	// 	}
-	// 	else
-	// 	{
-	// 		return;
-	// 	}
-	// }
-	
-	//권총 사용시
-	if (bUsingSK_Pistol)
-	{
-		// LineTrace 시작위치
-		FVector startPos = cameraComp->GetComponentLocation();
-		// LineTrace 종료위치
-		FVector endPos = cameraComp->GetComponentLocation() + cameraComp->GetForwardVector() * 5000;
-		// LineTrace의 충돌 정보를 담을 변수
-		//FHitResult hitInfo;
-		//충돌 옵션 설정 변수
-		FCollisionQueryParams params;
-		//자기 자신(플레이어)는 충돌에서 제외
-		params.AddIgnoredActor(this);
-		//Channel 필터를 이용한 LineTrace 충돌검출 (충돌 정보, 시작 위치, 종료 위치, 검출 채널,충돌 옵션)
-		bool bHit = GetWorld()->LineTraceSingleByChannel(hitInfo, startPos, endPos, ECC_Visibility, params);
-	}
-
-}
-
-//권총을 변경
-void APlayer_Jill::ChangeToSK_Pistol()
-{
-	// 권총 사용중으로 체크
-	bUsingSK_Pistol = true;
-	sniperGunComp->SetVisibility(false);
-	gunMeshComp->SetVisibility(true);
-}
-//스나이퍼건으로 변경
-void APlayer_Jill::ChangeToSniperGun()
-{
-	bUsingSK_Pistol = false;
-	sniperGunComp->SetVisibility(true);
-	gunMeshComp->SetVisibility(false);
 }
 

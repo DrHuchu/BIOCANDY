@@ -35,6 +35,7 @@ public:
 		void Recognition();
 	UFUNCTION()
 		void RecognitionOff(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	
 
 
 	class APlayer_Jill* player;
@@ -70,6 +71,9 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnMyBurn();
 
+	UFUNCTION(BlueprintImplementableEvent)
+		void OnMyEating();
+	
 	//¿¡³Ê¹Ì HP
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	int hp;

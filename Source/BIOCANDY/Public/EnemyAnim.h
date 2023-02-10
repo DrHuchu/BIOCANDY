@@ -35,4 +35,7 @@ public:
 
 	UPROPERTY()
 	class AEnemy* me;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool bAttackSide;
 };

@@ -8,6 +8,7 @@
 #include "EnemyAnim.h"
 #include "NavigationSystem.h"
 #include "Player_Jill.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Perception/PawnSensingComponent.h"
 
@@ -38,7 +39,7 @@ void UEnemyFSM::BeginPlay()
 	//소유 객체 가져오기
 	me = Cast<AEnemy>(GetOwner());
 
-	mState = EEnemyState::Idle;
+	//mState = EEnemyState::Idle;
 
 	me->hp = me->maxHP;
 
@@ -49,6 +50,7 @@ void UEnemyFSM::BeginPlay()
 	idleDelayTime = FMath::RandRange(0.0f, 8.0f);
 
 }
+
 
 
 // Called every frame
@@ -90,6 +92,10 @@ void UEnemyFSM::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 
 	case EEnemyState::Shocked:
 		ShockedState();
+		break;
+
+	case EEnemyState::Eating:
+		EatingState();
 		break;
 	}
 }
@@ -148,7 +154,6 @@ void UEnemyFSM::MoveState()
 	//타깃과 가까워지면 공격상태로 전환하고 싶다.
 	//1. 만약 거리가 공격 범위 안에 들어오면
 	if (dir.Size() < attackRange)
-
 		//2. 공격 상태로 전환하고 싶다.
 	{
 		SetState(EEnemyState::Attack);
@@ -161,6 +166,7 @@ void UEnemyFSM::MoveState()
 
 void UEnemyFSM::AttackState()
 {
+	ai->StopMovement();
 	//일정 시간에 한 번씩 공격하고 싶다.
 	//1. 시간이 흘러야 한다.
 	currentTime += GetWorld()->DeltaTimeSeconds;
@@ -170,6 +176,15 @@ void UEnemyFSM::AttackState()
 
 		//3. 공격하고 싶다.
 	{
+		randIntAttackSide = FMath::RandRange(0,99);
+		if(randIntAttackSide<=49)
+		{
+			me->enemyAnim->bAttackSide = true;
+		}
+		else
+		{
+			me->enemyAnim->bAttackSide = false;
+		}
 		//타깃이 공격 범위를 벗어나면 상태를 이동으로 전환하고 싶다.
 	//1. 타깃과의 거리가 필요하다.
 		float distance = FVector::Distance(target->GetActorLocation(), me->GetActorLocation());
@@ -206,6 +221,7 @@ void UEnemyFSM::DieState()
 	ai->StopMovement();
 	me->pawnSensor->bSeePawns = false;
 	me->pawnSensor->bHearNoises = false;
+	me->GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
 	return;
 }
 
@@ -242,6 +258,13 @@ void UEnemyFSM::ShockedState()
 		me->pawnSensor->bHearNoises = true;
 		SetState(EEnemyState::Roam);
 	}
+}
+
+void UEnemyFSM::EatingState()
+{
+	ai->StopMovement();
+	me->pawnSensor->bSeePawns = false;
+	me->pawnSensor->bHearNoises = false;
 }
 
 void UEnemyFSM::OnDamageProcess(int damageValue)
@@ -311,7 +334,18 @@ void UEnemyFSM::OnHitEvent()
 	float dist = target->GetDistanceTo(me);
 	if (dist <= attackRange)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Enemy is Attack"));
+		target->OnMyHit(attackDamage);
+		//UE_LOG(LogTemp, Warning, TEXT("Enemy is Attack"));
 	}
+}
+
+void UEnemyFSM::OnZombieRun()
+{
+	me->GetCharacterMovement()->MaxWalkSpeed = 400;
+}
+
+void UEnemyFSM::OffZombieRun()
+{
+	me->GetCharacterMovement()->MaxWalkSpeed = 20;
 }
 
