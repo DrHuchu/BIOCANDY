@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EnemyFSM.h"
 #include "Components/TimelineComponent.h"
 #include "GameFramework/Character.h"
 #include "Player_Jill.generated.h"
@@ -22,6 +23,19 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	//플레이어 피격 함수
+	UFUNCTION(BlueprintNativeEvent)
+	void OnMyHit(int AttackDamage);
+	//플레이어 죽음 함수
+	UFUNCTION(BlueprintNativeEvent)
+	void OnMyGameOver();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bIsOver = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	class USphereComponent* gameOverSphere;
+	
 	UPROPERTY(EditAnywhere)
 	class USpringArmComponent* springArmComp;
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
@@ -55,22 +69,9 @@ public:
 
 	// 총알 발사 처리 함수
 	void InputFire();
-	//스나이퍼건 스태틱메시 추가
-	UPROPERTY(EditAnywhere, Category=GunMesh)
-	class UStaticMeshComponent* sniperGunComp;
+	
 	//권총 사용 중인지 여부
 	bool bUsingSK_Pistol = true;
-	// 권총으로 변경
-	void ChangeToSK_Pistol();
-	// 스나이퍼건으로 변경
-	void ChangeToSniperGun();
-
-	// 총알 파편 효과 공장
-	UPROPERTY(EditAnywhere, Category=BulletEffect)
-	class UParticleSystem* bulletEffectFactory;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-		FHitResult hitInfo;
 
 	UPROPERTY(EditAnywhere)
 	class UBoxComponent* interactionBox;
@@ -79,8 +80,7 @@ public:
 
 	//  권총 조준 함수 선언
 	void PistolAim();
-	// 스나이퍼 조준 중인지 여부
-	bool bSniperAim = false;
+
 	// 스나이퍼 UI 위젯 공장
 	UPROPERTY(EditDefaultsOnly, Category = UI)
 	TSubclassOf<class UUserWidget> pistolCrossHairUIFactory;
@@ -88,11 +88,11 @@ public:
 	class UUserWidget*pistolCrossHairUI;
 
 	// 현재 체력
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category=Health)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Health)
 	int32 hp;
 	// 초기 hp값
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category=Health)
-	int32 initialHp = 10;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Health)
+	int32 maxHP = 10;
 	// 피격 당했을 때 처리
 	UFUNCTION(BlueprintCallable, Category = Health)
 	void OnHitEvent();
@@ -140,18 +140,32 @@ public:
 
 	//탄창메거진, 재장전
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void OnActionReload();
+
+	UFUNCTION()
+	void Reload();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class USoundBase* reloadingSound;
 
 	//총탄창, 탄창 MAX, 탄창 가방
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int pistolCountMag;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int maxPistolCountMag = 15;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int pistolCountBag = 30;
 	UPROPERTY(EditAnywhere)
 	bool canShoot = true;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool bIsReloading = false;
+	
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	class UUserWidget* damagedUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+	TSubclassOf<class UUserWidget> damagedUIFactory;
 	
 	FTimeline timeline;
 	UPROPERTY(EditAnywhere)
@@ -159,7 +173,14 @@ public:
 
 	UFUNCTION()
 	void Zoom(float value);
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	class UUserWidget* gameOverUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+	TSubclassOf<class UUserWidget> gameOverUIFactory;
 
+	UPROPERTY()
+	class AEnemy* enemy;
 
 private:
 	float walkSpeed = 600;
