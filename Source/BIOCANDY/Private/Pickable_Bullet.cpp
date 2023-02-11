@@ -9,8 +9,6 @@ void APickable_Bullet::InteractWithMe()
 {
 	if (!bIsOn)
 	{
-		player = Cast<APlayer_Jill>(GetWorld()->GetFirstPlayerController()->GetPawn());
-
 		if(player)
 		{
 			//플레이어에 있는 탄약수 15 증가

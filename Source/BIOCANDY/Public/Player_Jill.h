@@ -72,6 +72,7 @@ public:
 	void InputFire();
 	
 	//권총 사용 중인지 여부
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool bUsingSK_Pistol = true;
 
 	UPROPERTY(EditAnywhere)
@@ -79,6 +80,7 @@ public:
 	class IInteractionInterface* interface;
 
 	//  권총 조준 함수 선언
+	UFUNCTION(BlueprintCallable)
 	void PistolAim();
 
 	// 스나이퍼 UI 위젯 공장
@@ -93,7 +95,7 @@ public:
 	int32 hp;
 	// 초기 hp값
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Health)
-	int32 maxHP = 10;
+	int32 maxHP = 30;
 	// 피격 당했을 때 처리
 	UFUNCTION(BlueprintCallable, Category = Health)
 	void OnHitEvent();
@@ -149,6 +151,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool bIsInventoryOn;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int herbCount;
+
 	UFUNCTION()
 	void Reload();
 
@@ -173,7 +178,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = UI)
 	TSubclassOf<class UUserWidget> damagedUIFactory;
 
-	UPROPERTY()
+	UPROPERTY();
 	FTimeline timeline;
 	UPROPERTY(EditAnywhere)
 	UCurveFloat* curveFloat;

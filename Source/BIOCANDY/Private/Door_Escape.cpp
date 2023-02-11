@@ -11,7 +11,6 @@ void ADoor_Escape::InteractWithMe()
 {
 	if (!bIsOn)
 	{
-		player = Cast<APlayer_Jill>(GetWorld()->GetFirstPlayerController()->GetPawn());
 		if (player)
 		{
 			//발전기가 다 돌아간 상태라면

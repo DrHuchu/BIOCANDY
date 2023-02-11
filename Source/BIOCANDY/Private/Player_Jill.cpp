@@ -255,7 +255,7 @@ void APlayer_Jill::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction(TEXT("Reload"), IE_Pressed, this,&APlayer_Jill::OnActionReload);
 
 	//인벤토리 오픈
-	PlayerInputComponent->BindAction(TEXT("Inventory"), IE_Pressed, this,&APlayer_Jill::OnActionInventory);
+	PlayerInputComponent->BindAction(TEXT("Inventory"), IE_Pressed, this,&APlayer_Jill::OnActionInventory).bExecuteWhenPaused = true;
 }
 
 void APlayer_Jill::OnMyGameOver_Implementation()

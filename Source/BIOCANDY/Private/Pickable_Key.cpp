@@ -8,7 +8,6 @@ void APickable_Key::InteractWithMe()
 {
 	if (!bIsOn)
 	{
-		player = Cast<APlayer_Jill>(GetWorld()->GetFirstPlayerController()->GetPawn());
 
 		if (player)
 		{

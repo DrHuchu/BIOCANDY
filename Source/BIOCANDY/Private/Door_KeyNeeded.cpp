@@ -9,7 +9,6 @@ void ADoor_KeyNeeded::InteractWithMe()
 {
 	if (!bIsOn)
 	{
-		player = Cast<APlayer_Jill>(GetWorld()->GetFirstPlayerController()->GetPawn());
 		if (player)
 		{
 			if (player->bIsKeyOn)
@@ -34,7 +33,6 @@ void ADoor_KeyNeeded::InteractWithMe()
 	}
 	else
 	{
-		player = Cast<APlayer_Jill>(GetWorld()->GetFirstPlayerController()->GetPawn());
 		if (player)
 		{
 			if (player->bIsKeyOn)

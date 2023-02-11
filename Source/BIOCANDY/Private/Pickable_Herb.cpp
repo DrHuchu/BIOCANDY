@@ -3,12 +3,17 @@
 
 #include "Pickable_Herb.h"
 
+#include "Player_Jill.h"
+
 void APickable_Herb::InteractWithMe()
 {
 	if (!bIsOn)
 	{
-		//게임모드에 있는 약초 수 1 증가
-
+		if(player)
+		{
+			// 플레이어에 있는 약초 수 1 증가
+			player->herbCount ++;	
+		}
 		Destroy();
 		bIsOn = true;
 	}

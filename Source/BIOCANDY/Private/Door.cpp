@@ -30,6 +30,8 @@ void ADoor::BeginPlay()
 
 	interactionWidget->SetVisibility(false);
 
+	player = Cast<APlayer_Jill>(GetWorld()->GetFirstPlayerController()->GetPawn());
+
 	if(curveFloat)
 	{
 		FOnTimelineFloat TimelineProgress;

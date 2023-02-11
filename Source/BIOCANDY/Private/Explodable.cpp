@@ -24,8 +24,6 @@ AExplodable::AExplodable()
 
 	meshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("meshComp"));
 	meshComp->SetupAttachment(RootComponent);
-
-
 }
 
 // Called when the game starts or when spawned
@@ -56,6 +54,8 @@ void AExplodable::Explosion()
 		//폭발 이펙트를 스폰시키고
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), explosionFactory, GetActorLocation());
 
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), explosionSound, GetActorLocation());
+		
 		//폭발 범위 내의 적들을 모두 화형 상태로 만든다.
 		//1. overlappingActors라는 배열을 만든다.
 		TArray<AActor*> overlappingActors;
@@ -83,7 +83,8 @@ void AExplodable::ElectricShock()
 		{
 			//전기충격 이펙트를 스폰시키고
 			UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), explosionFactory, GetActorLocation(), FRotator::ZeroRotator, FVector(1), true);
-
+			
+			UGameplayStatics::PlaySoundAtLocation(GetWorld(), shockSound, GetActorLocation());
 			//범위 내의 적들을 모두 쇼크 상태로 만든다.
 			//1. overlappingActors 라는 배열을 만든다.	
 			TArray<AActor*> overlappingActors;

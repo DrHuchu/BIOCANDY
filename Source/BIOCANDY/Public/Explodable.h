@@ -47,6 +47,12 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Explodable Settings")
 		class UParticleSystem* explosionFactory;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class USoundBase* explosionSound;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class USoundBase* shockSound;
+
 	class UEnemyFSM* enemyFSM;
 
 	class AEnemy* enemy;

@@ -6,32 +6,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94807534-0f33-47e2-869a-01fa5f740240" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/CurveFloat/CameraCurveFloat.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/NewCameraAnimationSequence.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Ammo_4x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/G17_4x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Herb_4x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Box_Basic_4x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Box_Highlight_4x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Box_None_4x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Box_Num_4x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Key_4x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Text_Line_4x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_Ammo_Text.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_G19_Text.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_Herb_Text.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_InventoryUI.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_Key_Text.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/20230210200413_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/HP_1_nobg_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/HP_2_nobg_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/HP_3_nobg_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/HP_4_nobg_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Text_Blur_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Use_Blur_opacity_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Use_Box_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Use_Box_darken_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/Item_Use_Icon_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/M_HP.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_Item_Use_UI.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/hp1_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/hp2_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/hp3_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/hp4_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/WB_Danger.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Level/play.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/SFX/BubbleBALZ_-_Electric_Explosion_Sound_Effect__mp3cut_net_.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/SFX/Explosion_sound_effect_-_REALISTIC__mp3cut_net_.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/SFX/Heartbeat-SFX-_HD-DOWNLOAD_.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/SFX/Resident-Evil-3-Remake-You-Are-Dead-♪-_Sound-Effect_.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/SFX/menu/Resident-Evil-3-Remake-Health-Restored-_Sound-Effect_.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/SFX/menu/menu_item_click.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/SFX/menu/menu_tick.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/SFX/pngkey_com-red-blur-png-4261778.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Barrel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Barrel.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Generator.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Generator.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/InteractionWidgetBullet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/InteractionWidgetBullet.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/InteractionWidgetHerb.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/InteractionWidgetHerb2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/InteractionWidgetHerb2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/InteractionWidgetKey.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/InteractionWidgetKey2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/InteractionWidgetKey2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_InventoryUI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_InventoryUI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Beta.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Beta.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/Biocandy.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Biocandy.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SFX/BulletCUe.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SFX/BulletCUe.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SFX/MetalCue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SFX/MetalCue.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Door.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Door.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Door_Escape.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Door_Escape.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Door_KeyNeeded.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Door_KeyNeeded.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Explodable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Explodable.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Pickable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Pickable.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Pickable_Bullet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Pickable_Bullet.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Pickable_Herb.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Pickable_Herb.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Pickable_Key.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Pickable_Key.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Player_Jill.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Player_Jill.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Public/Explodable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Public/Explodable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Public/Player_Jill.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Public/Player_Jill.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,25 +74,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.31814894&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.31814894",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\SBAuser\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\SBAuser\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\SBAuser\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\bbssvv\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\bbssvv\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\bbssvv\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="C++ Project.BIOCANDY">
     <configuration name="BIOCANDY" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -307,6 +330,7 @@
       <workItem from="1675991214702" duration="8948000" />
       <workItem from="1676019810721" duration="1110000" />
       <workItem from="1676023668783" duration="2082000" />
+      <workItem from="1676121586913" duration="9530000" />
     </task>
     <servers />
   </component>

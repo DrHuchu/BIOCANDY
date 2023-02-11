@@ -27,6 +27,7 @@ void APickable::BeginPlay()
 {
 	Super::BeginPlay();
 	interactionWidget->SetVisibility(false);
+	player = Cast<APlayer_Jill>(GetWorld()->GetFirstPlayerController()->GetPawn());
 }
 
 // Called every frame
