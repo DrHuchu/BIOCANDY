@@ -178,7 +178,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = UI)
 	TSubclassOf<class UUserWidget> damagedUIFactory;
 
-	UPROPERTY();
+	UPROPERTY()
 	FTimeline timeline;
 	UPROPERTY(EditAnywhere)
 	UCurveFloat* curveFloat;

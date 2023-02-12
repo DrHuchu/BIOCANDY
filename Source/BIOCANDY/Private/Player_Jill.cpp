@@ -10,8 +10,6 @@
 #include "Components/BoxComponent.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 #include "Blueprint/UserWidget.h"
-#include "../BIOCANDY.h"
-#include "PlayerJillAnim.h"
 #include "Components/SphereComponent.h"
 #include "Components/TimelineComponent.h"
 
