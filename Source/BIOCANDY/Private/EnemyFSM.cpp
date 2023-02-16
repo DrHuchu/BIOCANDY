@@ -29,7 +29,7 @@ void UEnemyFSM::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-
+	
 	//월드에서 APlayer_Jill 타깃 찾아오기
 	auto actor = UGameplayStatics::GetActorOfClass(GetWorld(), APlayer_Jill::StaticClass());
 

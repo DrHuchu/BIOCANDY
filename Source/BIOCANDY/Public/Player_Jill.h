@@ -194,6 +194,44 @@ public:
 	UPROPERTY()
 	class AEnemy* enemy;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float timer;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float clearMinute;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float clearSecond;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int fireCount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int hitCount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float hitRate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float headRate;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int headShotCount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int damageCount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int herbUseCount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int finalScore;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	class UUserWidget* clearRankUI;
+	UPROPERTY(EditAnywhere, Category = UI)
+	TSubclassOf<class UUserWidget> clearRankUIFactory;
+	
 private:
 	float walkSpeed = 600;
 };

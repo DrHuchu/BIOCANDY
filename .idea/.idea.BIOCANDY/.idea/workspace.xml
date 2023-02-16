@@ -6,493 +6,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94807534-0f33-47e2-869a-01fa5f740240" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/floor/SM_MERGED_StaticMeshActor_432.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet/Scene_-_Root.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet/rust_cabinet-freepoly_org.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet/rust_cabinet-freepoly_org_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet/rust_cabinet-freepoly_org_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet/rust_cabinet-freepoly_org_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet2/FileCab_01.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet2/FileCab_01_A_FileCab_01_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet2/FileCab_01_B_FileCab_01_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet2/FileCab_01_C_FileCab_01_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet2/FileCab_01_D_FileCab_01_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet2/FileCab_01_body_FileCab_01_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet2/file_cabinet_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet2/file_cabinet_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/1rowCabinet2/file_cabinet_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/SM_MERGED_StaticMeshActor_113.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodTable2/Table_bakedV1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodTable2/vintage_wooden_table.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodTable2/vintage_wooden_table_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodTable2/vintage_wooden_table_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodTable2/vintage_wooden_table_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodTable2/vintage_wooden_table_texture_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodenTable/Open_Close.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodenTable/SM_MERGED_StaticMeshActor_548.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodenTable/Table.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodenTable/wooden_table_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodenTable/wooden_table_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/WoodenTable/wooden_table_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Audio.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_BlackBlue.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Bristol.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_DorianGray.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Dreaming.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Enchanters.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Eragon.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Euro.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Everyone.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_History.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Mathematical.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Odyssey.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Ramiel.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Reef.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_Tomorrow.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Books_TwentyFive.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_10.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_12.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_14.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_16.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_18.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_20.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_22.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_24.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_26.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_28.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_30.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_32.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_34.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_6.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/Object_8.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_10.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_11.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_12.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_13.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_14.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_15.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_6.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_7.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_8.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/books/books_texture_9.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/BOOKS.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/BOOKS_1__0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/SHKAFF_MAT.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/SHKAF_ALBEDO.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/SM_MERGED_StaticMeshActor_524.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_10.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_11.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_12.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_13.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_14.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_15.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_16.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_17.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_6.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_7.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_8.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/bookshelf_texture_9.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/material.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/material_10.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/material_11.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/material_12.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/material_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/material_6.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/material_7.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/material_8.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/material_9.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/shkaff_obj_1_SHKAFF_MAT_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/bookshelf/shkaff_obj_1_SHKAF_ALBEDO_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/cargoShelf/material.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/cargoShelf/warehouse_shelving_unit.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/cargoShelf/warehouse_shelving_unit_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/cargoShelf/warehouse_shelving_unit_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/cargoShelf/warehouse_shelving_unit_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/cargoShelf/warehouse_shelving_unit_texture_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/cargoShelf/warehouse_shelving_unit_texture_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/cargoShelf/warehouse_shelving_unit_texture_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/hospital_door/Door.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/hospital_door/Door_baseColor.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/hospital_door/Door_normal.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/hospital_door/hospital_door_frame.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/hospital_door/untitled.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/investigationBoard/SM_MERGED_StaticMeshActor_702.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/investigationBoard/Scene_-_Root.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/investigationBoard/investigation_board_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/investigationBoard/investigation_board_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/investigationBoard/investigation_board_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/kit_Books/books_01_books_kit_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/kit_Books/books_02_books_kit_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/kit_Books/books_03_books_kit_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/kit_Books/books_04_books_kit_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/kit_Books/books_05_books_kit_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/kit_Books/books_06_books_kit_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/kit_Books/books_07_books_kit_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/kit_Books/books_08_books_kit_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/kit_Books/books_kit.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/kit_Books/kit_books_v01_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/newspaper/Material_Newspaper_Stack.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/newspaper/cc0_newspaper_stack_-_ready_to_unity_hdrp_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/newspaper/cc0_newspaper_stack_-_ready_to_unity_hdrp_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/newspaper/cc0_newspaper_stack_-_ready_to_unity_hdrp_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/newspaper/newspaper_1_Material_Newspaper_Stack_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/newspaper/newspaper_2_Material_Newspaper_Stack_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/Material_004.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/SM_MERGED_StaticMeshActor_473.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/antique_wooden_desk_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/antique_wooden_desk_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/antique_wooden_desk_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/handle1_lp_001_Material_004_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/handle1_lp_003_Material_004_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/handle2_lp_001_Material_004_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/handle2_lp_002_Material_004_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/handle2_lp_003_Material_004_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/handle2_lp_004_Material_004_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldDesk/plane_lp_001_Material_004_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldTV/material.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldTV/tv__old_tv__retro_tv.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldTV/tv__old_tv__retro_tv_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldTV/tv__old_tv__retro_tv_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/oldTV/tv__old_tv__retro_tv_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/phone2/office_phone.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/phone2/office_phone_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/phone2/phone_a.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/slipperySign/Standardmaterial.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/slipperySign/the_wet_floor_sign.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/slipperySign/the_wet_floor_sign_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/slipperySign/the_wet_floor_sign_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/slipperySign/the_wet_floor_sign_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Big_tube_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Corner_Large_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Corner_Medium_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Corner_Small_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Door_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Door_lambert2_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Elevator_door2_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Elevator_door_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Elevator_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Elevator_shaft_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Floor_1_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Floor_2_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Floor_3_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Glass_door_blinn1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Glass_door_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Keycard_door1_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Keycard_door1_lambert2_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Keycard_door2_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Keycard_door2_lambert2_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Keycard_door3_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Keycard_door3_lambert2_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Keycard_door4_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Keycard_door4_lambert2_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Medium_tube_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Small_tube_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Wall_Double_door_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Wall_door_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Wall_long_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Wall_medium_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Wall_small_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Wall_window1_blinn1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/Wall_window_lambert1_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/blinn1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/lambert1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/lambert2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/modular_office_building_assets_post_apoc_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/modular_office_building_assets_post_apoc_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/stair/modular_office_building_assets_post_apoc_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/standingClock/MainBodyGlassSG.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/standingClock/Object_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/standingClock/Object_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/standingClock/historic_standing_clock_northern_europe_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/standingClock/historic_standing_clock_northern_europe_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/standingClock/historic_standing_clock_northern_europe_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/standingClock/historic_standing_clock_northern_europe_texture_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/standingClock/historic_standing_clock_northern_europe_texture_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/standingClock/initialShadingGroup.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/telephone/01_-_Default.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/telephone/ptish_phone.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/telephone/ptish_phone_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/telephone/ptish_phone_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/telephone/ptish_phone_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/Glass.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/Lamp.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/Plastic.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/SM_MERGED_RectLight_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/tube-lamp_lp_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/tube-lamp_lp_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/tube-lamp_lp_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/tube-lamp_lp_texture_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/tube-lamp_lp_texture_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/tube-lamp_lp_texture_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/tubeLamp/tube-lamp_lp_texture_6.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/Wood_Crate_A.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/Wood_Crate_A_Wood_Crate_A_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/Wood_Crate_B.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/Wood_Crate_B_Wood_Crate_B_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/Wood_Crate_C.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/Wood_Crate_C_Wood_Crate_C_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/wood_crate_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/wood_crate_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/wood_crate_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/wood_crate_texture_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/wood_crate_texture_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/wood_crate_texture_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/wood_crate_texture_6.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/wood_crate_texture_7.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/wood_crate/wood_crate_texture_8.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/corpo/Object_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/corpo/Object_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/corpo/Object_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/corpo/blinn2SG.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/corpo/phongE1SG.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Booth_Locker.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Booth_Table.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Ceiling_and_Floor.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Door_Material.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Glass.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Guard_Booth_Inside.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Guard_Booth_Material.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Light.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Roof.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Roof_Guard.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/SM_MERGED_StaticMeshActor_738.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Window_Inner_Lining.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/Window_Outer_Railing.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_10.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_11.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_12.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_13.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_14.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_15.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_16.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_17.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_18.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_19.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_20.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_21.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_22.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_23.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_24.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_25.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_26.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_27.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_28.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_29.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_30.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_31.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_32.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_33.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_4.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_5.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_6.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_7.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_8.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/guardBooth/guard_booth_with_interior_texture_9.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/plasticBarrel/Barrel.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/plasticBarrel/barrel1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/plasticBarrel/barrel_texture_0.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/plasticBarrel/barrel_texture_1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/plasticBarrel/barrel_texture_2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/Mat_CarLight.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Dusty_Concrete_Stairs_ujcgdgifa/MI_Dusty_Concrete_Stairs_ujcgdgifa_2K.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Dusty_Concrete_Stairs_ujcgdgifa/S_Dusty_Concrete_Stairs_ujcgdgifa_lod3_Var1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Dusty_Concrete_Stairs_ujcgdgifa/T_DustyConcreteStairs_ujcgdgifa_2K_DpR.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Dusty_Concrete_Stairs_ujcgdgifa/T_Dusty_Concrete_Stairs_ujcgdgifa_2K_D.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Dusty_Concrete_Stairs_ujcgdgifa/T_Dusty_Concrete_Stairs_ujcgdgifa_2K_N.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Mossy_Rocky_Ground_vcrkeeb/MI_Mossy_Rocky_Ground_vcrkeeb_2K.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Mossy_Rocky_Ground_vcrkeeb/T_MossyRockyGround_vcrkeeb_2K_ORDp.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Mossy_Rocky_Ground_vcrkeeb/T_Mossy_Rocky_Ground_vcrkeeb_2K_D.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Mossy_Rocky_Ground_vcrkeeb/T_Mossy_Rocky_Ground_vcrkeeb_2K_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Assets/Mat_CarLight_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Assets/SM_Template_Map_Floor1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/BP_EndPoint.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/CurveFloat/EndCurveFloat.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/A_waifu2x_noise3_scale2x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/BP_ClearRank.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/B_waifu2x_noise3_scale2x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/C_waifu2x_noise3_scale2x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/D_waifu2x_noise3_scale2x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/S_waifu2x_noise3_scale2x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/WB_GameClear.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-BLACK.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-BLACK_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-BOLD.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-BOLD_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-EXTRABOLD.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-EXTRABOLD_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-EXTRALIGHT.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-EXTRALIGHT_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-LIGHT.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-LIGHT_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-MEDIUM.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-MEDIUM_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-REGULAR.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-REGULAR_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-SEMIBOLD.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-SEMIBOLD_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-THIN.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-THIN_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/gameclear_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Castle_Stairs_scjuQ/MI_Castle_Stairs_scjuQ_2K.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Castle_Stairs_scjuQ/S_Castle_Stairs_scjuQ_lod3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Castle_Stairs_scjuQ/T_CastleStairs_scjuQ_2K_DpR.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Castle_Stairs_scjuQ/T_Castle_Stairs_scjuQ_2K_D.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Castle_Stairs_scjuQ/T_Castle_Stairs_scjuQ_2K_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/EndPoint.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelDesign/game-ready-building-3/source/atlas.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelDesign/game-ready-building-3/source/atlas.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelDesign/game-ready-building-3/source/atlas_004.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelDesign/game-ready-building-3/source/atlas_004.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelDesign/game-ready-mid-poly-building/source/Atlas.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelDesign/game-ready-mid-poly-building/source/Atlas.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelDesign/grungy-little-car/source/Material__24.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelDesign/grungy-little-car/source/Material__24.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/asianBuilding/standardSurface1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/asianBuilding/standardSurface1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/brnox/Material.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/brnox/Material.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/building2/Material_001.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/building2/Material_001.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/buildingFront/Building_1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/buildingFront/Building_1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/buildingFront/Building_3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/buildingFront/Building_3.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/NY_Building/Material_002.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/NY_Building/Material_002.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/NY_Building/Material_011.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/NY_Building/Material_011.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/NY_Building/Material_012.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/NY_Building/Material_012.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/NY_Building/Material_013.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/NY_Building/Material_013.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/NY_Building/Material_016.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/NY_Building/Material_016.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/lowpoly_building/Material.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/far/lowpoly_building/Material.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_building/unnamed.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_building/unnamed.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_building/unnamed_1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_building/unnamed_1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/AirCon01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/AirCon01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Boards01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Boards01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Brick01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Brick01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Brickedge01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Brickedge01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/ConcreteDetail.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/ConcreteDetail.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Concrete_poured01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Concrete_poured01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Doors01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Doors01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/DoubleDoor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/DoubleDoor.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Graffiti01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Graffiti01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Roller01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Roller01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Rooftar01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Rooftar01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Rusty.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Rusty.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Sign01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Sign01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Sign02.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Sign02.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Stucco01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Stucco01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Utility.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Utility.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Windows01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/Windows01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/lambert4.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/lambert4.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603818.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603818.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603819.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603819.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603820.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603820.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603821.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603821.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603822.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603822.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603823.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603823.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603824.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603824.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603825.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603825.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603826.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603826.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603827.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_2100603827.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_26.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_garage/Material_26.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_003.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_003.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_004.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_004.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_005.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_005.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_006.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_006.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_007.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_007.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_008.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/oldbuild/Material_008.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/shop/wire_000000000.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/shop/wire_000000000.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/wasteland_store/Material_2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/wasteland_store/Material_2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/wasteland_store/Material_3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/wasteland_store/Material_3.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/cardboardbox/Material.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/cardboardbox/Material.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/ceiling/MAT_WoodenCeiling.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/ceiling/MAT_WoodenCeiling.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/corridor/wallLamp/2ndFlr_Walllamp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/corridor/wallLamp/2ndFlr_Walllamp.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/floor/floor_and_Ceiling/MAT_Asphalt_Floor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/floor/floor_and_Ceiling/MAT_Asphalt_Floor.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/DirtPile/initialShadingGroup.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/DirtPile/initialShadingGroup.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/DP_TNR_Pallet_1-2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/DP_TNR_Pallet_1-2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/SP_TNR_Trashbin_1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/SP_TNR_Trashbin_1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/Street_trash_can_1_0.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/Street_trash_can_1_0.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/TP_OldTVs1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/TP_OldTVs1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/TP_OldTVs1_0.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/TP_OldTVs1_0.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/TP_OldTVs1_2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/TP_OldTVs1_2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/TP_Old_tire1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/urban/TP_Old_tire1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/hospital_door/Door.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/hospital_door/Door.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/hospital_door/hospitalDoorFrame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/hospital_door/hospitalDoorFrame.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/SafetyNoticeBoard/T_safety_board_1001.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/SafetyNoticeBoard/T_safety_board_1001.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/hotel_door/MAT_Hotel_Door.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/hotel_door/MAT_Hotel_Door.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/office_chair/LP_mat.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/office/office_chair/LP_mat.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/Blue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/Blue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/Blue_dark.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/Blue_dark.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/Carbagelambert40SG1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/Carbagelambert40SG1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/Weel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/Weel.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/Weel_2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/Weel_2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/lambert8.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/lambert8.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/material.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/material.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/paper_sign.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/paper_sign.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/trash1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/trash1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/weel_3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/Dumpster/weel_3.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/TrafficCone/cone.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/TrafficCone/cone.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/brick/Material_001.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/brick/Material_001.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/concreteBarrier/smallfences.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/concreteBarrier/smallfences.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/container/BODY.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/container/BODY.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/deadBody/M_DeadBodyCovered.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/deadBody/M_DeadBodyCovered.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence/Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence/Base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence/Fence.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence/Fence.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence/Metal0.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence/Metal0.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence/material.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence/material.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence/metal.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence/metal.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence_door/01_-_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence_door/01_-_Default.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence_door/Material_001.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence_door/Material_001.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence_door/Material__44.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence_door/Material__44.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence_door/fencewall_wire.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/fence_door/fencewall_wire.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/lowpoly_Concrete_barrier/roadblock1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/lowpoly_Concrete_barrier/roadblock1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/lowpoly_Concrete_barrier/roadblock1_0.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/lowpoly_Concrete_barrier/roadblock1_0.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/manhole/phong1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/manhole/phong1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/militaryTruck/Material.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/militaryTruck/Material.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/militaryTruck/Material2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/militaryTruck/Material2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/militaryTruck/Material3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/militaryTruck/Material3.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/phonebooth/box_tex.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/phonebooth/box_tex.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/phonebooth/glass_tex.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/phonebooth/glass_tex.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/phonebooth/line_tex.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/phonebooth/line_tex.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/phonebooth/phone_tex.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/phonebooth/phone_tex.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/roadmaker/Material_005.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/roadmaker/Material_005.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/roadmaker/Material_006.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/roadmaker/Material_006.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/rusty_door/Material_0.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/rusty_door/Material_0.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/BOLT_THREADS1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/BOLT_THREADS1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/BOLT_THREADS_11TPI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/BOLT_THREADS_11TPI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Blacktop_Old_01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Blacktop_Old_01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_001.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_001.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_003.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_003.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_D04.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_D04.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_M01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_M01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_M02.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_M02.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_M04.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_M04.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_M05.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Color_M05.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Concrete_Aggregate_Smoke.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Concrete_Aggregate_Smoke.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/FBR-2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/FBR-2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Galvanized_steel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Galvanized_steel.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Aluminum_Anodized.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Aluminum_Anodized.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Aluminum_Anodized_0.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Aluminum_Anodized_0.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Brass_Ceiling.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Brass_Ceiling.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Corrogated_Shiny.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Corrogated_Shiny.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Rough.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Rough.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Rough_001.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Metal_Rough_001.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Polished_Concrete_New.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Polished_Concrete_New.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Polished_Concrete_Old.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Polished_Concrete_Old.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Translucent_Glass_Gray.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Translucent_Glass_Gray.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Translucent_Glass_Gray_001.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/Translucent_Glass_Gray_001.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/_0018_Brown.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/_0018_Brown.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/_0134_DimGray.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/_0134_DimGray.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/_0135_DarkGray.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/_0135_DarkGray.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/_0137_Black.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/_0137_Black.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/__Color_M09_2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/__Color_M09_2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/__Polished_Concrete_Old_1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/__Polished_Concrete_Old_1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/__Translucent_Glass_Gray_1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/__Translucent_Glass_Gray_1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/__auto_.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/__auto_.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/material.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/material.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/material_100.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/material_100.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/material_12.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/material_12.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/material_3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/streetlight/material_3.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/vendingMachine/mi_VendingMachines_01_01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/vendingMachine/mi_VendingMachines_01_01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/waste_construct/material0.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/waste_construct/material0.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/waste_construct/material1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/waste_construct/material1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/waste_construct/material2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/road/waste_construct/material2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/Barrel_01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/Barrel_01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/Material.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/Material.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/T_GreenHerb.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/T_GreenHerb.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/door1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/door1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/door2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/door2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/door3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/door3.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/key_mat.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/key_mat.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/lambert1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/lambert1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/lightbulb_01_base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/lightbulb_01_base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/lightbulb_01_glass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/lightbulb_01_glass.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Props/power_box_01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Props/power_box_01.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Mat_CarLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Mat_CarLight.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_InventoryUI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_InventoryUI.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/play.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/play.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MSPresets/M_MS_Default_Material/Functions/MF_Tiling.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MSPresets/M_MS_Default_Material/Functions/MF_Tiling.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Modular_Wooden_Ceiling_ugyqbb2dw/MI_Modular_Wooden_Ceiling_ugyqbb2dw_2K.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Modular_Wooden_Ceiling_ugyqbb2dw/MI_Modular_Wooden_Ceiling_ugyqbb2dw_2K.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Wooden_Interior_Wall_wbhobeedw/MI_Wooden_Interior_Wall_wbhobeedw_2K.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Wooden_Interior_Wall_wbhobeedw/MI_Wooden_Interior_Wall_wbhobeedw_2K.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Megascans/Surfaces/Patterned_Floor_Tiles_ugcoeg0s/MI_Patterned_Floor_Tiles_ugcoeg0s_2K.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Patterned_Floor_Tiles_ugcoeg0s/MI_Patterned_Floor_Tiles_ugcoeg0s_2K.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Megascans/Surfaces/Mossy_Rocky_Ground_vcrkeeb/MI_Mossy_Rocky_Ground_vcrkeeb_2K.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Mossy_Rocky_Ground_vcrkeeb/MI_Mossy_Rocky_Ground_vcrkeeb_2K.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Basic_Wall.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Basic_Wall.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Glass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Glass.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Door.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Door.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Frame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Frame.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_TableRound.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_TableRound.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/EnemyFSM.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/EnemyFSM.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Player_Jill.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Player_Jill.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Public/Player_Jill.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Public/Player_Jill.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -511,25 +77,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.31814894",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.31814894&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\SBAuser\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\SBAuser\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\SBAuser\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\SBAuser\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\SBAuser\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\SBAuser\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="C++ Project.BIOCANDY">
     <configuration name="BIOCANDY" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -768,7 +334,9 @@
       <workItem from="1676019810721" duration="1110000" />
       <workItem from="1676023668783" duration="2082000" />
       <workItem from="1676121586913" duration="9530000" />
-      <workItem from="1676265489010" duration="578000" />
+      <workItem from="1676265489010" duration="2189000" />
+      <workItem from="1676451611505" duration="12306000" />
+      <workItem from="1676533214484" duration="7827000" />
     </task>
     <servers />
   </component>

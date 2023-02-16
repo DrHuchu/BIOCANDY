@@ -93,6 +93,9 @@ void APlayer_Jill::BeginPlay()
 	//게임 오버 UI 생성
 	gameOverUI = CreateWidget(GetWorld(), gameOverUIFactory);
 
+	//클리어 랭크 UI 생성
+	clearRankUI = CreateWidget(GetWorld(), clearRankUIFactory);
+
 	// hp
 	hp = maxHP;
 
@@ -112,6 +115,7 @@ void APlayer_Jill::OnHitEvent()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Damaged"));
 	hp--;
+	damageCount++;
 	if (hp <= 0)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Dead"));
@@ -161,6 +165,8 @@ void APlayer_Jill::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	// direction 방향으로 이동하고 싶다.
 	timeline.TickTimeline(DeltaTime);
+
+	timer += DeltaTime;
 
 	FTransform trans(GetControlRotation());
 	FVector resultDirection = trans.TransformVector(direction);
@@ -279,6 +285,7 @@ void APlayer_Jill::OnMyGameOver_Implementation()
 void APlayer_Jill::OnMyHit_Implementation(int AttackDamage)
 {
 	hp -= AttackDamage;
+	damageCount++;
 
 	if(bIsOver == false)
 	{
