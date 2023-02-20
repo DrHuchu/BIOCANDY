@@ -6,59 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94807534-0f33-47e2-869a-01fa5f740240" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Assets/Mat_CarLight_Inst.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/SM_Template_Map_Floor1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/BP_EndPoint.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/CurveFloat/EndCurveFloat.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/A_waifu2x_noise3_scale2x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/BP_ClearRank.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/B_waifu2x_noise3_scale2x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/C_waifu2x_noise3_scale2x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/D_waifu2x_noise3_scale2x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/S_waifu2x_noise3_scale2x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/WB_GameClear.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-BLACK.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-BLACK_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-BOLD.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-BOLD_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-EXTRABOLD.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-EXTRABOLD_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-EXTRALIGHT.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-EXTRALIGHT_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-LIGHT.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-LIGHT_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-MEDIUM.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-MEDIUM_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-REGULAR.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-REGULAR_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-SEMIBOLD.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-SEMIBOLD_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-THIN.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/font/PRETENDARD-THIN_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/gameclear_4x.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Castle_Stairs_scjuQ/MI_Castle_Stairs_scjuQ_2K.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Castle_Stairs_scjuQ/S_Castle_Stairs_scjuQ_lod3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Castle_Stairs_scjuQ/T_CastleStairs_scjuQ_2K_DpR.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Castle_Stairs_scjuQ/T_Castle_Stairs_scjuQ_2K_D.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Castle_Stairs_scjuQ/T_Castle_Stairs_scjuQ_2K_N.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/EndPoint.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Mat_CarLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Mat_CarLight.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/OldCItyBuilding.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/OldCItyBuilding.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/DirtPile/SM_MERGED_StaticMeshActor_101.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/DirtPile/SM_MERGED_StaticMeshActor_101.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_InventoryUI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Inventory/WB_InventoryUI.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/play.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/play.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Modular_Wooden_Ceiling_ugyqbb2dw/MI_Modular_Wooden_Ceiling_ugyqbb2dw_2K.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Megascans/3D_Assets/Modular_Wooden_Ceiling_ugyqbb2dw/MI_Modular_Wooden_Ceiling_ugyqbb2dw_2K.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Megascans/Surfaces/Mossy_Rocky_Ground_vcrkeeb/MI_Mossy_Rocky_Ground_vcrkeeb_2K.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Mossy_Rocky_Ground_vcrkeeb/MI_Mossy_Rocky_Ground_vcrkeeb_2K.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Basic_Wall.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Basic_Wall.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Glass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Glass.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Door.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Door.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Frame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Frame.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_TableRound.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_TableRound.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/EnemyFSM.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/EnemyFSM.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/Player_Jill.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/Player_Jill.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Public/Player_Jill.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Public/Player_Jill.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/EndPoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/EndPoint.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,6 +291,7 @@
       <workItem from="1676265489010" duration="2189000" />
       <workItem from="1676451611505" duration="12306000" />
       <workItem from="1676533214484" duration="7827000" />
+      <workItem from="1676880789022" duration="1188000" />
     </task>
     <servers />
   </component>

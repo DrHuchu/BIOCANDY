@@ -146,6 +146,7 @@ void AEndPoint::OnEndPointOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 		}	
 
 		player->clearRankUI->AddToViewport();
+		GetWorld()->GetFirstPlayerController()->SetShowMouseCursor(true);
 		UE_LOG(LogTemp, Warning, TEXT("%d"), player->finalScore);
 	}
 }
