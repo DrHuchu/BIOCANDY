@@ -6,13 +6,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94807534-0f33-47e2-869a-01fa5f740240" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/Intro/BP_IntroSeq.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/IntroLevelSequence.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Logo_green.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Logo_lightgreen.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/MPC_Dissolve.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/MPC_Dissolve1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/M_Dissolve.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/M_Dissolve1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/M_Dissolve_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Text_black.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Text_grey.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/WB_MainMenu.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/logo1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/logo2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/logo3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/logo_text.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/logo_text2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Level/Intro.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Level/Untitled.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/OldCItyBuilding.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/Buildings/old_city_building/OldCItyBuilding.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/DirtPile/SM_MERGED_StaticMeshActor_101.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/LevelMaking/garbage/DirtPile/SM_MERGED_StaticMeshActor_101.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_Player_Jill.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/play.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/play.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BIOCANDY/Private/EndPoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BIOCANDY/Private/EndPoint.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,6 +308,7 @@
       <workItem from="1676451611505" duration="12306000" />
       <workItem from="1676533214484" duration="7827000" />
       <workItem from="1676880789022" duration="1188000" />
+      <workItem from="1676963230519" duration="2739000" />
     </task>
     <servers />
   </component>
