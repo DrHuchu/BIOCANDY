@@ -6,29 +6,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94807534-0f33-47e2-869a-01fa5f740240" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Intro/BP_IntroSeq.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/IntroLevelSequence.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/Logo_green.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/Logo_lightgreen.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/MPC_Dissolve.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/MPC_Dissolve1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/M_Dissolve.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/M_Dissolve1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/M_Dissolve_Inst.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/Text_black.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/Text_grey.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/WB_MainMenu.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/logo1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/logo2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/logo3.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/logo_text.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Intro/logo_text2.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Level/Intro.umap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Level/Untitled.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/RUNNING-FOOTSTEPS-SOUND-EFFECT.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/Resident-Evil-3-Remake-Soundtrack-Free-From-Fear.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/20230222174629_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/LOADING-SCREEN-THEME-_Resident-Evil-3-Remake_.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/Resident-Evil-3-Remake-Main-Menu-Theme.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/WB_GameQuit.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/WB_GameStartCaution.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/WB_Loading.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/WB_MainMenu1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/caution_4x.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Intro/Widget/loadingScreen_4x.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIOCANDY/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_OpeningLevelSequence.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/BP_OpeningLevelSequence.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/WB_GameClear.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/WB_GameClear.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/Widgets/WB_GameOverUI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrint/Widgets/WB_GameOverUI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Intro/Widget/WB_MainMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Intro/Widget/WB_MainMenu.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Intro/Widget/WB_MenuSelect.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Intro/Widget/WB_MenuSelect.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Intro.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Intro.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/noIntro.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/noIntro.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/play.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/play.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SFX/AnyConv_com__RESIDENT_EVIL_3_REMAKE_OST_-_The_City_Without_Hope__Raccoon_City__THEME.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SFX/AnyConv_com__RESIDENT_EVIL_3_REMAKE_OST_-_The_City_Without_Hope__Raccoon_City__THEME.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SFX/BGMCUe.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SFX/BGMCUe.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,6 +309,7 @@
       <workItem from="1676533214484" duration="7827000" />
       <workItem from="1676880789022" duration="1188000" />
       <workItem from="1676963230519" duration="2739000" />
+      <workItem from="1677147263532" duration="806000" />
     </task>
     <servers />
   </component>
