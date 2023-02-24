@@ -34,6 +34,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool bIsOver = false;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool  bIsCleared = false;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	class USphereComponent* gameOverSphere;
 	

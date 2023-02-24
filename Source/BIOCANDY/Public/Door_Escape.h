@@ -18,4 +18,7 @@ public:
 
 	UPROPERTY()
 	class ADoor_Escape_Side* sidedoor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class USoundBase* openSound;
 };

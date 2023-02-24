@@ -27,6 +27,7 @@ void ADoor_Escape::InteractWithMe()
 				
 				player->escapeDoorUI->RemoveFromParent();
 				timeline.Play();
+				UGameplayStatics::PlaySoundAtLocation(GetWorld(), openSound, GetActorLocation());
 			}
 			else
 			{

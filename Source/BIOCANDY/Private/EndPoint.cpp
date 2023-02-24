@@ -42,6 +42,8 @@ void AEndPoint::OnEndPointOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Overlapped"));
 
+		player->bIsCleared = true;
+
 		UGameplayStatics::SetGamePaused(this, true);
 
 		float fireCount = (float) player->fireCount;
